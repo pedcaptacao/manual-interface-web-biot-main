@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=xxxxxx"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'xxxxxx');
+    </script>
+    <title> Manual Interface Web - Controladora De Led - TB2-TB50-TB60</title>
+     <link href="../res/img/favicon.ico" rel="shortcut icon"/> 
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="../res/css/bootstrap.css" rel="stylesheet"/>
+    <link href="../res/css/manual.css" rel="stylesheet" type="text/css"/>
+    <script src="../res/js/jquery.js"></script>
+    <script src="../res/js/bootstr
+    ap.js"></script>
+    <script src="../res/js/animatescroll.js"></script>
+    <script src="../res/js/manual.js"></script>
+    <script type="text/javascript">
+        var comboGoogleTradutor = null; // Global
+    
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,es,pt',
+                layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+            }, 'google_translate_element');
+    
+            comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
+        }
+    
+        function changeEvent(el) {
+            if (el.fireEvent) {
+                el.fireEvent('onchange');
+            } else {
+                var evObj = document.createEvent("HTMLEvents");
+    
+                evObj.initEvent("change", false, true);
+                el.dispatchEvent(evObj);
+            }
+        }
+    
+        function trocarIdioma(sigla) {
+            if (comboGoogleTradutor) {
+                comboGoogleTradutor.value = sigla;
+                changeEvent(comboGoogleTradutor);//Dispara a troca
+            }
+        }
+        </script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <style type="text/css">
+            
+            
+            .goog-te-banner-frame {
+                display: none !important;
+            }
+            .goog-logo-link {
+                display:none !important;
+            }
+            .goog-te-gadget {
+            color: transparent !important;
+            }
+
+            .goog-te-gadget .goog-te-combo {
+            color: black !important;
+            }
+            body {
+                position: static !important;
+                top: 0 !important;
+            }
+            
+            </style>
+     <script>
+        // Este script altera o título da página com base na seção clicada e direciona suavemente para ela.
+        document.addEventListener('DOMContentLoaded', function() {
+          const linksSecoes = document.querySelectorAll('a[href^="#"]');
+          
+          linksSecoes.forEach(function(linkSecao) {
+            linkSecao.addEventListener('click', function(event) {
+              const secao = document.querySelector(this.getAttribute('href')); // Obtém a seção pelo ID
+              
+              if (secao && secao.dataset.titulo) { // Verifica se a seção e o atributo data-titulo existem
+                document.title = ' TB2-TB50-TB60 ' + secao.dataset.titulo; // Atualiza o título da página
+                
+                // Rola suavemente até a seção correspondente
+                secao.scrollIntoView({ behavior: 'smooth' });
+              }
+            });
+          });
+        });
+      </script>
+</head>
+<body class="scayt-enabled" data-spy="scroll" data-target=".scrollspy">
+
+    <div class="overlay"></div>
+
+    <div class="header no-print">
+        <nav class="nav-header">
+            <div class="logo">
+                <a href="../index.html">
+                    <figure>
+                        <img class="nav-img" src="../res/img/intelbras_marca.svg">
+                    </figure>
+                </a>
+      </div>
+            <div class="iconMenu">
+                <a id="toggleMenu">
+                    <img src="../res/img/menu.svg">
+                </a>
+            </div>
+            <div style="float: right; top: 16px; position: relative;">
+                <div id="google_translate_element"></div>
+                
+                <a href="#" onClick="window.print()">
+                    <img src="../res/img/pdf.svg">
+                </a>
+            </div>
+        </nav>
+        <ul style="list-style-type: none;">
+            <li  id="op1" class="nav-header">
+                <span class="h2">MANUAL Controladoras de Led TB 2 /TB 50/TB 60 </span>
+            </li>
+        </ul>
+    </div>
+    
+<div class="container" style="max-width: 1280px"> 
+    <div class="row" style="float: left; width: 20%; margin-right: 20px;">
+        <div class="col-md-3 scrollspy" style="top: 150px">
+            <ul class="nav hidden-xs hidden-sm" data-spy="affix" id="nav" style="top: 150px;">
+                <li class = "active">
+                    <a href="#apresentacao">APRESENTAÇÃO</a>
+                    <ul class="nav">
+                        <li><a href="#viplexexpress">ViPlex Express</a></li>
+                        <li><a href="#novalct">NovaLCT</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#hardware">HARDWARE</a>
+                    <ul class="nav">
+                        <li class = "active"><a href="#conexoes">Conexões</a>
+                            <ul class="nav">
+                                <li><a href="#via_cabo">Via cabo de rede</a></li>
+                                <li><a href="#lan_fio">LAN com fio</a></li>
+                                <li><a href="#wifi_ap">Wi-Fi AP</a></li>
+                            </ul>
+                        </li>
+                        <li class = "active"><a href="#login">Login</a>
+                            <ul class="nav">
+                                <li><a href="#viplex_express_login">ViPlex Express (Async Mode)</a></li>
+                                <li><a href="#novalct_login">NovaLCT</a></li>
+                                <li><a href="#viplex_handy_login">ViPlex Handy</a></li>
+                            
+                        <li class = "active"><a href="#tela_inicial_viplex">Tela Inicial Viplex </a></li>
+                        <li class = "active" ><a href="#tela_inicial_novaLCT">Tela Inicial NovaLCT</a></li>
+                    </ul>
+                </li>
+                    </ul>
+                </li>
+                <li class = "active"> 
+                    <a href="#novas_funcionalidades">NOVAS FUNCIONALIDADES</a>
+                    <ul class="nav">
+                        <li><a href="#novidades_viplex">Novidades do ViPlex</a></li>
+                        <li><a href="#suporte_novalct">Suporte ao NovaLCT</a></li>
+                        <li><a href="#diagnostico">Diagnóstico e Resolução de Problemas</a></li>
+                        <li><a href="#calibracao">Calibração e Ajustes Avançados de Horário</a>
+                            <ul class="nav">
+                                <li ><a href="#calibracao_brilho">Calibração de Brilho</a></li>
+                                <li><a href="#ajuste_cores">Ajuste de Cores</a></li>
+                                <li><a href="#config_avancadas">Configurações Avançadas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div style="float: right; width: 84%;"> 
+<section id="apresentacao" class="apresentacao" data-titulo="apresentacao">
+    <img src="../res/img/intelbras_marca.svg" id="logoIntelbras" class="logo-apresentacao">
+    <p class="versao-manual">Versão deste manual: 1.00</p>
+    <section id="viplexexpress" data-titulo="viplex_express"></section>
+    <h1>Viplex Express</h1>
+    
+        <p>O <strong><a href="https://en-website001.oss-us-east-1.aliyuncs.com/ViPlex%20Express%20V3.0.0.3401%20Setup(X64).zip">ViPlex</a></strong> é uma solução indicada pela Intelbras e projetada para o gerenciamento de conteúdo em displays LED, permitindo a edição e reprodução de informações de forma eficiente em ambientes corporativos e comerciais. Este software é compatível com as controladoras da linha TB, incluindo modelos como TB2, TB50 e TB60.</p>
+        <p>Com uma plataforma web interativa, o ViPlex oferece aos operadores a capacidade de personalizar a ambientação conforme as necessidades específicas de cada perfil, garantindo uma experiência de uso intuitiva e confortável. A interface é amigável e facilita o acesso a diversas funcionalidades.</p>
+        <p>Para acessar a Interface Web do ViPlex, é necessário que o dispositivo esteja conectado à mesma rede que o computador. O acesso é feito através do endereço IP do dispositivo, simplificando a gestão e a atualização de conteúdos em tempo real.</p>
+    </section>
+    <h2>NovaLCT</h2>
+    <section id="novalct">
+         <p>O <strong><a href="https://en-website001.oss-us-east-1.aliyuncs.com/NovaLCT%20V5.5.0.zip">NovaLCT</a></strong> é uma solução da novastar projetada para o gerenciamento de conteúdo em displays de LED,calibração e ajustes avançados.
+         Este software é compatível com as controladoras da linha TB, incluindo modelos como TB2, TB50 e TB60.</p>       
+    </section>
+</section>
+
+<section id="hardware" data-titulo="HARDWARE">
+    <h1>HARDWARE</h1>
+
+    <section id="via_cabo" data-titulo="via_cabo">
+        <h3>Via Cabo de Rede</h3>
+        <p>Essa configuração utiliza uma conexão física entre o painel LED e o computador para garantir estabilidade e alta velocidade de transmissão. Siga os passos abaixo:</p>
+        <ol>
+            <li><strong>Conecte o Cabo de Rede:</strong>
+                <p>Insira uma extremidade do cabo de rede no painel LED e a outra no roteador ou diretamente no computador.</p>
+            </li>
+            <li><strong>Configuração de Rede:</strong>
+                <p>No computador, certifique-se de que a conexão está configurada para obter um endereço IP automaticamente (DHCP).</p>
+            </li>
+            <li><strong>Abra o Software:</strong>
+                <p>Inicie o ViPlex Express ou NovaLCT e certifique-se de que o dispositivo foi detectado na lista de terminais.</p>
+            </li>
+            <li><strong>Teste a Conexão:</strong>
+                <p>Envie um conteúdo de teste para verificar se a comunicação entre o computador e o painel está funcionando corretamente.</p>
+            </li>
+        </ol>
+    </section>
+    
+    <section id="lan_fio" data-titulo="lan_fio">
+        <h3>LAN com Fio</h3>
+        <p>A configuração LAN com fio é ideal para redes locais e ambientes corporativos. Siga os passos abaixo:</p>
+        <ol>
+            <li><strong>Conecte o Cabo de Rede:</strong>
+                <p>Insira uma extremidade do cabo de rede no painel LED e a outra no switch ou roteador da rede local.</p>
+            </li>
+            <li><strong>Desative o DHCP:</strong>
+                <p>No painel LED, desative o serviço DHCP e configure um endereço IP estático.</p>
+            </li>
+            <li><strong>Configuração de Rede no Computador:</strong>
+                <p>No computador, configure um endereço IP na mesma faixa do painel LED.</p>
+            </li>
+            <li><strong>Conexão com o Software:</strong>
+                <p>Abra o ViPlex Express ou NovaLCT e conecte-se ao painel LED utilizando o endereço IP configurado.</p>
+            </li>
+            <li><strong>Verificação:</strong>
+                <p>Envie um conteúdo de teste para garantir que o painel LED está respondendo corretamente.</p>
+            </li>
+        </ol>
+    </section>
+    
+    <section id="wifi_ap" data-titulo="wifi_ap">
+        <h3>Wi-Fi AP</h3>
+        <p>O modo Wi-Fi AP permite que o painel LED funcione como um ponto de acesso, facilitando conexões sem fio. Siga os passos abaixo:</p>
+        <ol>
+            <li><strong>Localize o SSID:</strong>
+                <p>Encontre o SSID do painel LED (geralmente "AP" + últimos 8 dígitos do número de série). Essa informação está disponível na etiqueta do dispositivo.</p>
+            </li>
+            <li><strong>Conecte-se ao Wi-Fi:</strong>
+                <p>No computador ou dispositivo móvel, conecte-se ao Wi-Fi utilizando o SSID e a senha padrão do painel LED.</p>
+            </li>
+            <li><strong>Abra o Software:</strong>
+                <p>Inicie o ViPlex Express ou o aplicativo móvel ViPlex Handy e localize o painel LED na lista de dispositivos.</p>
+            </li>
+            <li><strong>Configuração Inicial:</strong>
+                <p>Acesse as configurações do painel e, se necessário, altere o SSID ou a senha para maior segurança.</p>
+            </li>
+            <li><strong>Teste a Conexão:</strong>
+                <p>Envie um conteúdo simples para o painel LED e confirme se a transmissão está funcionando.</p>
+            </li>
+        </ol>
+    </section>
+    
+
+    <section id="login" data-titulo="login">
+        <h2>Login</h2>
+
+        <section id="viplex_express_login" data-titulo="viplex_express_login">
+            <h3>ViPlex Express</h3>
+            <p>1. Abra o ViPlex Express e vá para a página <em>Screens</em>.</p>
+            <p>2. Clique em <em>Refresh</em> para atualizar a lista de dispositivos.</p>
+            <p>3. Selecione a controladora e clique em <em>Connect</em>. Digite a senha padrão "admin" e clique em OK.</p>
+            <img src="../res/img/TBS/login_viplex_express.png" width="75%">
+        </section>
+
+        <section id="novalct_login" data-titulo="novalct_login">
+            <h3>NovaLCT</h3>
+            <p>1. Abra o NovaLCT e vá para o menu <em>User > Media Player Login</em>.</p>
+            <p>2. Na caixa de diálogo <em>Terminal List</em>, clique em <em>Refresh</em>.</p>
+            <p>3. Selecione a controladora e clique em <em>Connect System</em>. Digite o nome de usuário "admin" e a senha padrão.</p>
+            <img src="../res/img/TBS/login_controladora_novaLCT.png" width="75%">
+        </section>
+
+        <section id="viplex_handy_login" data-titulo="viplex_handy_login"> 
+            <h3>ViPlex Handy</h3>
+            <p>1. Abra o ViPlex Handy e vá para a página <em>Local Devices</em>.</p>
+            <p>2. Atualize a lista de dispositivos locais e selecione a controladora desejada. Clique em <em>Connect</em> e insira as credenciais.</p>
+            <p>
+                <a href="https://youtube.com/shorts/VdXvhj9sB_M?si=4Byklq5SSfn134AE" target="_blank">Assista ao vídeo no YouTube</a>
+            </p>
+        </section>
+
+    <section id="tela_inicial_viplex" data-titulo="tela_inicial_viplex">
+        <h2>Tela Inicial Viplex</h2>
+        <p>Após a instalação, a página inicial exibe as controladoras disponiveis, menu superior e os atalhos, permitindo o gerenciamento completo das funções do dispositivo.</p>
+        <img src="../res/img/TBS/tela_inicial_viplex.png" width="75%">
+        <li><strong>Menu Superior:</strong>
+            <ul>
+                <li><strong>Screens:</strong> Exibe todos os dispositivos conectados, com informações como status de conexão, nome do dispositivo e armazenamento disponível.</li>
+                <li><strong>Solutions:</strong> Permite criar, editar e organizar conteúdos, como imagens, vídeos e layouts personalizados.</li>
+                <li><strong>Control:</strong> Ajuste as preferências do software, incluindo idioma, sincronização de horário, modo de exibição e atualizações automáticas.</li>
+            </ul>
+        </li>
+        <li><strong>Screens:</strong>
+            <p>Localizado na página inicial da tela, este painel exibe os dispositivos , como:</p>
+            <ul>
+                <li>Status da conexão (online/offline/not logged/Total)</li>
+                <li>Ip,nome dos dispositivos e a resolução das controladoras</li>
+                <li>Controladoras atualmente em execução</li>
+            </ul>
+        </li>
+        <li><strong>Solutions:</strong>
+            <p>Localizado à direita de Screens , este menu oferece atalhos para as principais funções:</p>
+            <ul>
+                <li><strong>Adicionar layout de exibição(New -> Regular Screen):</strong> Crie layouts com imagens para exibir no painel de Led desejado,edite podendo incluir horários específicos e transições animadas.</li> 
+                <li><strong>Criar:</strong></li>
+                
+                <img src="../res/img/TBS/criando_midia.png" alt="Criando midia ViPlex Express" style="width:75%; margin-top:20px;">
+         </ul>
+              
+       <li><strong>Control:</strong>
+         <p>Localizado à direita de Schedule , este menu oferece atalhos para mais configurações de ajustes do software:</p>
+         <li><strong>Play logs :</strong> Acesse os logs das mídias onde é possível ter um relatório geral de exibição do arquivo de mídia , com data e hora que foi exibida a mídia,exporte essas informações para CSV ou excel para melhor controle da sua controladora.</li>
+         <img src="../res/img/TBS/play_logs.png" alt="Log do app" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/play_logs1.9.png" alt="Log do app" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/play_logs2.png" alt="Log do app" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/play_logs2.2.png" alt="Log do app" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/play_logs2.3.png" alt="Log do app" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/play_logsexport2.4.png" alt="Log do app" style="width:75%; margin-top:20px;">
+         <li><strong>Playback Management:</strong> Atualize os conteúdos e verifique se as alterações foram aplicadas aos dispositivos conectados.</li>
+         <img src="../res/img/TBS/playback_management.png" alt="Tocar midias" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/view_screenshot.png" alt="visualizar midia" style="width:75%; margin-top:20px;">
+         <li><strong>Network Configuration:</strong> Verifique a rede em que se encontra as controladoras online no Viplex e logadas,possibilitando ter Informações sobre o tipo de conexão do aparelho </li>
+         <img src="../res/img/TBS/network_connection.png" alt="Conexão de rede" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/wIfi_network.png" alt="wifi" style="width:75%; margin-top:20px;">
+         <li><strong>Brightness adjustment:</strong> Ajuste o brilho da imagem conforme a sua prêferencia de acordo com o horário</li>
+         <img src="../res/img/TBS/brightness_ajustment1.png" alt="Ajuste de brilho 1" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/brightnessadjustment2.png" alt="Ajuste de brilho 2" style="width:75%; margin-top:20px;">
+         <li><strong>Video source:</strong> Controle a resolução de exibição seu conteudo e o tipo de transmissão desejado</strong></li>
+         <img src="../res/img/TBS/videosource.png" alt="Videosource" style="width:75%; margin-top:20px;">
+         <li><strong>Screen status control:</strong> Apague a imagem do seu painel no momento que preferir, e programe a duração de tempo para alternar entre o conteúdo setado e o blackout do painel </li>
+         <img src="../res/img/TBS/screen_status1.png" alt="Status da tela ViPlex Express" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/screen_status2.png" alt="Criando midia ViPlex Express" style="width:75%; margin-top:20px;">
+         <li><strong>Restart configuration:</strong> Faça o reset da controladora diariamente ou nos horarios e espaços de tempo que preferir </li>
+         <img src="../res/img/TBS/restart_configuration.png" alt="Reiniciar mídia ViPlex Express" style="width:75%; margin-top:20px;">
+         <li><strong>Color temperature: A controladora possui 3 modos de temperatura de cores "natural white,standard white e cold white" </strong></li>
+         <img src="../res/img/TBS/color_temperature.png" alt="Temperatura de cor da midia ViPlex Express" style="width:75%; margin-top:20px;">
+         <li><strong>Monitoring:</strong> Para monitorar o uso de memória,CPU da controladora e para limpar o espaço usado com as mídias ,além de que se estiver conectado a um sensor de luminosidade,é possivel ver o status de luminosidade do ambiente e possibilita o ajuste de luminosidade do painel de LED</li>
+         <img src="../res/img/TBS/monitoring.png" alt="Monitoramento da midia no ViPlex Express" style="width:75%; margin-top:20px;">
+         <li><strong>Font Management:</strong> Possui as fontes disponiveis que está instalada na máquina,pode ser adicionado novas fontes para usar nas mídias , desde que baixado e instalado no computador </li>
+         <img src="../res/img/TBS/font_management.png" alt="control no Viplex Express" style="width:75%; margin-top:20px;">
+         <img src="../res/img/TBS/font_management_entrar.png" alt="Dentro da função do font_management" style="width:75%; margin-top:20px;">
+
+         <li><strong>Player Upgrade:</strong> Para verificar se possui atualizações da controladora,e atualizar para uma nova versão quando disponivel diretamente do site ou de arquivos do computador , podendo ser baixado no site da Novastar</li>
+         <img src="../res/img/TBS/player_upgrade.png" alt="Upgrade da controladora" style="width:75%; margin-top:20px;">
+         <li><strong>Player Information:</strong> O player information, mostra as informações do hardware e do software que está sendo exibido a mídia </li>
+         <img src="../res/img/TBS/player_information.png" alt="Informação do player do ViPlex Express" style="width:75%; margin-top:20px;">
+         <li><strong>Multi-Screen Mosaic:</strong> Quando possui mais de uma tela conectada via HDMI à controladora é possível criar um mosaico com as telas conectadas </li>
+         <img src="../res/img/TBS/mosaico.png" alt="Criando mosaico de midia no ViPlex Express" style="width:75%; margin-top:20px;">
+         <div class="alert alert-info">
+            <li><strong>Obs:</strong> Não é possível com a TB2 criar mosaico de telas,pois a controladora não possui saída HDMI</li>
+         </div>
+        
+         <img src="../res/img/TBS/control.png" alt="Controle de configurações do ViPlex Express" style="width:75%; margin-top:20px;">
+              
+              
+              
+              
+            </ul>
+        </li>
+        
+        <li><strong>Pré-visualização:</strong>
+            <p>Dentro da mídia que você preparou,ao lado esquerdo de "View Schedule", há uma área de pré-visualização onde pode simular a exibição dos conteúdos antes de enviá-los ao painel LED. Utilize esta ferramenta para validar o design e as animações.</p>
+            <p>A mídia possui diversas opções </p>
+            <img src="../res/img/TBS/pre_visualizar.png" alt="Pré visualizar " style="width:75%; margin-top:20px;">
+
+        </li>
+        
+    </section>
+</section>
+
+<section id="tela_inicial_novaLCT" data-titulo="tela_inicial_novaLCT">
+    <h3>Tela Inicial - NovaLCT</h3>
+    <p>A interface do NovaLCT foi projetada para facilitar o gerenciamento, configuração e manutenção de painéis LED de maneira eficiente. Este guia apresenta uma visão detalhada e acessível das funções básicas para que você possa utilizar o software de forma plena.</p>
+
+    <ol>
+        <li><strong>Acesso Inicial:</strong>
+            <p>Ao abrir o NovaLCT, você será direcionado para a tela inicial. Caso necessário, atualize para a versão mais recente através da janela de atualização automática. Para se conectar a um painel LED:</p>
+            <ul>
+                <li>No menu superior, clique em <em>User > Media Player Login</em>.</li>
+                <li>Na janela <em>Terminal List</em>, clique em <strong>Refresh</strong> para localizar dispositivos disponíveis.</li>
+                <li>Selecione o painel desejado e clique em <strong>Connect System</strong>. Insira as credenciais padrão (usuário: "admin", senha: "123456") ou personalizadas.</li>
+                <li>Se o painel não aparecer, clique em <strong>Specify IP</strong>, insira o endereço IP do painel manualmente e pressione <strong>Search</strong>.</li>
+                <img src="../res/img/TBS/tela_inicial_novaLCT.png" alt="Pré visualizar " style="width:75%; margin-top:20px;">
+            </ul>
+        </li>
+
+        <li><strong>Menu Superior:</strong>
+            <p>O menu superior é o ponto central para acessar todas as funções principais:</p>
+            <ul>
+                <li><strong>System (S):</strong> Permite configurar o sistema, carregar arquivos de configuração e gerenciar dispositivos conectados.</li>
+                <li><strong>Settings (C):</strong> Ajustes detalhados, incluindo resolução, frequência de atualização e parâmetros avançados das telas.</li>
+                <li><strong>Tools (T):</strong> Acesse ferramentas de diagnóstico e manutenção, como ajustes de brilho e correção de pixels defeituosos.</li>
+                <li><strong>Plug-in (P):</strong> Recursos adicionais para integrar novos módulos e funcionalidades extras.</li>
+                <li><strong>User (U):</strong> Gerencie contas e permissões de usuários.</li>
+                <li><strong>Language (L):</strong> Altere o idioma da interface conforme sua preferência.</li>
+                <li><strong>Help (H):</strong> Acesso direto à documentação oficial, tutoriais e suporte técnico.</li>
+                <img src="../res/TBS/menu_superior.png" alt="Tela Inicial NovaLCT" style="width:75%; margin-top:20px;">
+            </ul>
+        </li>
+
+        <li><strong>Funções Principais:</strong>
+            <p>A tela inicial apresenta atalhos para as funções mais usadas. Aqui estão as principais:</p>
+            <ul>
+                <li><strong>Cloud Monitoring:</strong> Monitore o status dos painéis LED remotamente, verificando conectividade e recebendo alertas em tempo real.</li>
+                <img src="../res/img/TBS/cloud_monitoring_novaLCT.png" alt="multi function NovaLCT" style="width:75%; margin-top:20px;">
+                <li><strong>Brightness:</strong> Ajuste manual ou automaticamente o brilho das telas para adequar às condições de luminosidade do ambiente.</li>
+                <img src="../res/img/TBS/brightness_adjustment_novaLCT.png" alt="Tela Inicial NovaLCT" style="width:75%; margin-top:20px;">
+                <li><strong>Screen Control:</strong> Configure layouts personalizados, resoluções e parâmetros de posicionamento dos painéis LED.</li>
+                <img src="../res/img/TBS/screen_control_novaLCT.png" alt="Tela Inicial NovaLCT" style="width:75%; margin-top:20px;">
+                <li><strong>Monitoring:</strong> Exibe informações essenciais de hardware, como temperatura, voltagem e status de conexão.</li>
+                <img src="../res/TBS/monitoring_novaLCT.png" alt="Tela Inicial NovaLCT" style="width:75%; margin-top:20px;">
+                <li><strong>Multi-function Card:</strong> Gerencie cartões multifuncionais conectados aos painéis, otimizando suas configurações específicas.</li>
+                <img src="../res/img/TBS/Multifunctioncard _management.png" alt="multi function NovaLCT" style="width:75%; margin-top:20px;">
+
+                <li><strong>Test Tool:</strong> Ferramenta dedicada para testes de desempenho, verificação de pixels defeituosos e sincronização das telas.</li>
+                <img src="../res/img/TBS/test_tool_novaLCT.png" alt="Test tool NovaLCT" style="width:75%; margin-top:20px;">
+
+            </ul>
+        </li>
+
+        <li><strong>Painel Central:</strong>
+            <p>Localizado no centro da interface, este painel exibe informações detalhadas sobre os dispositivos conectados:</p>
+            <ul>
+                <li><strong>Informações do Sistema Local:</strong> Número de controladores conectados, dispositivos adicionais e a versão do serviço.</li>
+                <li><strong>Monitoramento:</strong>
+                    <ul>
+                        <li>Indicadores de status para cada dispositivo (verde para online e cinza para offline).</li>
+                        <li>Visualização do hardware conectado, como controladores e sensores de temperatura.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Detalhes dos Dispositivos:</strong>
+                    <ul>
+                        <li><strong>Porta de Comunicação:</strong> Mostra o IP e porta de comunicação do dispositivo conectado.</li>
+                        <li><strong>Tipo de Dispositivo:</strong> Identifica o modelo e especificações do controlador ou equipamento.</li>
+                        <li><strong>Número de Dispositivos:</strong> Quantifica dispositivos ativos na conexão.</li>
+                        <li><strong>S/N (Número de Série):</strong> Exibe o número de série do hardware.</li>
+                        <li><strong>Operações:</strong> Área destinada a comandos ou ações específicas para cada dispositivo.</li>
+                        <img src="../res/TBS/Local_system_monitoring_novaLCT.png" alt="Test tool NovaLCT" style="width:75%; margin-top:20px;">
+                    </ul>
+                </li>
+
+        <li><strong>Logout:</strong>
+            <p>Para encerrar sua sessão com segurança, clique no botão de logout localizado no canto superior direito. O nome do usuário logado também será exibido para fácil identificação.</p>
+        </li>
+    </ol>
+
+    <div class="alert alert-info">
+        <strong>Dica:</strong> Utilize a funcionalidade "Load Configuration File" para importar configurações previamente salvas e economizar tempo na configuração inicial. Salve alterações regularmente para evitar a perda de dados importantes.
+    </div>
+
+    <img src="../res/img/TBS/tela_inicial_novaLCT.png" alt="Tela Inicial NovaLCT" style="width:75%; margin-top:20px;">
+</section>
+
+
+</section>
+
+<section id="novas_funcionalidades" data-titulo="novas_funcionalidades">
+    <h1>Novas Funcionalidades</h1>
+    <section id="novidades_viplex" data-titulo="novidadesdoviplex">
+        <h2>Novidades do ViPlex</h2>
+        
+        <p>A combinação do ViPlex e NovaLCT oferece um conjunto completo de ferramentas para gerenciamento, configuração e manutenção de painéis LED. Com estas soluções, é possível:</p>
+
+        <ul>
+            <li>Gerenciar conteúdo de forma eficiente</li>
+            <li>Realizar ajustes técnicos precisos</li>
+            <li>Monitorar o funcionamento do sistema</li>
+            <li>Manter a qualidade de exibição</li>
+        </ul>
+
+        
+    </section>
+    
+    <section id="suporte_novalct" data-titulo="suporte_novalct">
+        <h2>Suporte ao NovaLCT</h2>
+        <p>O NovaLCT é uma ferramenta complementar ao ViPlex, permitindo o controle avançado das configurações de exibição. Ele é usado principalmente para:</p>
+        <ul>
+            <li>Configurar brilho e contraste dos displays LED.</li>
+          <li>Gerenciar layouts de exibição para diferentes.</li>
+      </ul>
+        <h3>Configurações Avançadas</h3>
+        <ul>
+            <li>Mapeamento de módulos LED</li>
+            <li>Configuração de refresh rate</li>
+            <li>Ajuste de escala e posicionamento</li>
+            <li>Correção de pixels defeituosos</li>
+        </ul>
+        <section id="diagnostico">
+            <h2>Diagnóstico e Resolução de Problemas</h2>
+            <p>Abaixo estão descrições detalhadas e soluções para problemas comuns encontrados no ViPlex e NovaLCT:</p>
+            <ul>
+                <li><strong>Conexão de Rede Instável:</strong>
+                    <p><strong>Descrição:</strong> O software não consegue detectar ou conectar-se ao painel LED. Isso pode ocorrer devido a problemas na rede ou configurações incorretas.</p>
+                    <p><strong>Solução:</strong> Verifique os cabos Ethernet e certifique-se de que estão conectados corretamente. Configure endereços IP na mesma faixa e, se necessário, desative temporariamente o firewall para testar a conexão.</p>
+                </li>
+                <li><strong>Falhas na Reprodução de Conteúdo:</strong>
+                    <p><strong>Descrição:</strong> O conteúdo de vídeo ou imagem apresenta falhas ou atrasos durante a reprodução.</p>
+                    <p><strong>Solução:</strong> Verifique a compatibilidade dos formatos de mídia com o software. Atualize para a versão mais recente do ViPlex Express e revise as configurações de agendamento e reprodução.</p>
+                </li>
+                <li><strong>Problemas de Calibração:</strong>
+                    <p><strong>Descrição:</strong> O brilho e as cores exibidos nos painéis não correspondem às configurações desejadas.</p>
+                    <p><strong>Solução:</strong> Utilize as ferramentas de calibração do NovaLCT para ajustar o brilho e a cromaticidade. Inspecione os módulos LED para identificar possíveis falhas de hardware.</p>
+                </li>
+                <li><strong>Erros de Sincronização:</strong>
+                    <p><strong>Descrição:</strong> Os horários de reprodução agendados não coincidem com os configurados no software.</p>
+                    <p><strong>Solução:</strong> Sincronize os relógios do sistema e do painel LED. Verifique se o fuso horário está configurado corretamente em ambos os dispositivos.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="calibracao" data-titulo="calibracao">
+            <h2>Calibração e Ajustes Avançados de Horário</h2>
+            <section id="calibracao_brilho">
+                <h3>Calibração de Brilho</h3>
+                <ul>
+                  <li>Configurar brilho e contraste dos displays LED.</li>
+                  <p>Realize ajustes precisos para adequar o brilho às condições do ambiente.</p>
+                  <p><strong>Passo 1:</strong> Acesse o NovaLCT e selecione a opção "Calibração de Brilho" no menu principal.</p>
+                  <p><strong>Passo 2:</strong> Conecte-se ao painel LED e inicie o processo de calibração.</p>
+                  <p><strong>Passo 3:</strong> Ajuste os níveis de brilho utilizando as barras deslizantes, observando o impacto em tempo real no painel.</p>
+                  <p><strong>Passo 4:</strong> Salve as configurações após atingir o nível desejado para evitar alterações acidentais.</p>
+                  <p><strong>Passo 5:</strong> Verifique o resultado final e ajuste conforme necessário para obter a melhor qualidade visual.</p>
+                  <a href="https://youtube.com/psKb-2PfEmw" target="_blank">Assista ao vídeo no YouTube</a>  
+                  <p><strong>Observação:</strong> Certifique-se de que o painel LED esteja conectado e operando corretamente antes de iniciar a calibração.</p>
+
+                  <h3>Definir Horários de Exibição de Mídia</h3>
+                  <p>O gerenciamento de layouts permite programar diferentes disposições de conteúdo para serem exibidas em horários específicos. Siga os passos abaixo para configurar:</p>
+                  <ol>
+                    <li><strong>Abrir o Software:</strong>
+                        <p>Inicie o Viplex e conecte-se ao painel LED utilizando as credenciais configuradas.</p>
+                    </li>
+                    <li><strong>Acessar Configuração de Layout:</strong>
+                        <p>Na interface principal, vá até "Solutions" e selecione a opção "New > Regular Screen".</p>
+                    </li>
+                    <li><strong>Configurar Elementos do Layout:</strong>
+                        <p>Adicione os seguintes elementos ao layout:</p>
+                        <ul>
+                            <li><strong>Imagens ou Vídeos:</strong> Arraste e solte os arquivos desejados no painel de edição.</li>
+                            <li><strong>Texto:</strong> Insira caixas de texto para adicionar mensagens dinâmicas ou fixas.</li>
+                            <li><strong>Relógios ou Temporizadores:</strong> Escolha widgets interativos para exibição de horários ou contagens regressivas.</li>
+                        </ul>
+                    </li>
+                   
+                    <li><strong>Definir Horários de Exibição:</strong>
+                        <p>No menu "View Schedule", configure os horários de início e término para cada layout. Certifique-se de que não há sobreposição de horários.</p>
+                    </li>
+                    <li><strong>Pré-visualizar e Salvar:</strong>
+                        <p>Clique na opção "Preview" para verificar como o layout será exibido no painel LED. Após confirmar, salve as configurações.</p>
+                    </li>
+                    <li><strong>Enviar para o Painel:</strong>
+                        <p>Utilize a função "Publish" para aplicar o layout configurado ao painel.</p>
+                    </li>
+                    <li><strong>Beginner's Guide:</strong>
+                        <p>Para uma introdução mais detalhada, consulte o guia de início rápido para configurar layouts ao lado esquerdo da função "View Schedule".</p>
+                    </ol>
+            
+                <div class="alert alert-info">
+                    <strong>Dica:</strong> Use layouts diferentes para horários de pico e horários de menor movimento, adaptando o conteúdo para o público-alvo.</div>
+
+              </ul>
+         </section>
+       
+    </section>
+  
+</section>
+
+<section id="ajuste_cores" data-titulo="ajuste_cores">
+    <h3>Ajuste de Cores</h3>
+    
+    <p>Configure individualmente os valores RGB para uma apresentação mais fiel às cores originais.</p>
+
+</section>
+
+</section>
+    <section id="config_avancadas" data-titulo="config_avancadas">
+            <h3>Configurações Avançadas</h3>
+            <p>Inclui mapeamento, correção de pixels defeituosos e ajuste de refresh rate.</p>
+    </section>
+        <div class="alert alert-warning">
+            <strong>Importante:</strong> Mantenha sempre os softwares atualizados para acesso às últimas funcionalidades e correções de segurança.
+        </div>
+    </section>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>Para mais informações, consulte o suporte técnico ou acesse nossa documentação online.</p>
+        <p>© 2024 Intelbras S/A</p>
+    </div>
+</footer>

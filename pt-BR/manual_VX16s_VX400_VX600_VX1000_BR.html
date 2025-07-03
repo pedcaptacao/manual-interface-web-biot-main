@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=xxxxxx"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'xxxxxx');
+    </script>
+    <title> Manual Interface Web - Controladora De Led - VX16s-VX400-VX600-VX1000 </title>
+     <link href="../res/img/favicon.ico" rel="shortcut icon"/> 
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="../res/css/bootstrap.css" rel="stylesheet"/>
+    <link href="../res/css/manual.css" rel="stylesheet" type="text/css"/>
+    <script src="../res/js/jquery.js"></script>
+    <script src="../res/js/animatescroll.js"></script>
+    <script src="../res/js/manual.js"></script>
+    <script type="text/javascript">
+        var comboGoogleTradutor = null; // Global
+    
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,es,pt',
+                layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+            }, 'google_translate_element');
+    
+            comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
+        }
+    
+        function changeEvent(el) {
+            if (el.fireEvent) {
+                el.fireEvent('onchange');
+            } else {
+                var evObj = document.createEvent("HTMLEvents");
+    
+                evObj.initEvent("change", false, true);
+                el.dispatchEvent(evObj);
+            }
+        }
+    
+        function trocarIdioma(sigla) {
+            if (comboGoogleTradutor) {
+                comboGoogleTradutor.value = sigla;
+                changeEvent(comboGoogleTradutor);//Dispara a troca
+            }
+        }
+        </script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <style type="text/css">
+            
+            
+            .goog-te-banner-frame {
+                display: none !important;
+            }
+            .goog-logo-link {
+                display:none !important;
+            }
+            .goog-te-gadget {
+            color: transparent !important;
+            }
+
+            .goog-te-gadget .goog-te-combo {
+            color: black !important;
+            }
+            body {
+                position: static !important;
+                top: 0 !important;
+            }
+            
+            </style>
+     <script>
+        // Este script altera o título da página com base na seção clicada e direciona suavemente para ela.
+        document.addEventListener('DOMContentLoaded', function() {
+          const linksSecoes = document.querySelectorAll('a[href^="#"]');
+          
+          linksSecoes.forEach(function(linkSecao) {
+            linkSecao.addEventListener('click', function(event) {
+              const secao = document.querySelector(this.getAttribute('href')); // Obtém a seção pelo ID
+              
+              if (secao && secao.dataset.titulo) { // Verifica se a seção e o atributo data-titulo existem
+                document.title = 'VX16s-VX400-VX600-VX1000 ' + secao.dataset.titulo; // Atualiza o título da página
+                
+                // Rola suavemente até a seção correspondente
+                secao.scrollIntoView({ behavior: 'smooth' });
+              }
+            });
+          });
+        });
+      </script>
+</head>
+
+  <body class="scayt-enabled" data-spy="scroll" data-target=".scrollspy">
+    <div class="overlay"></div>
+
+    <div class="header no-print">
+        <nav class="nav-header">
+            <div class="logo">
+                <a href="index.html">
+                    <figure>
+                        <img class="nav-img" src="../img/intelbras_marca.svg">
+                    </figure>
+                </a>
+        </div>
+            <div class="iconMenu">
+                <a id="toggleMenu">
+                    <img src="../img/menu.svg">
+                </a>
+            </div>
+            <div style="float: right; top: 16px; position: relative;">
+                <div id="google_translate_element"></div>
+                <a href="#" onClick="window.print()">
+                    <img src="../img/pdf.svg">
+                </a>
+            </div>
+        </nav>
+        <ul style="list-style-type: none;">
+            <li id="op1" class="nav-header">
+                <span class="h2">MANUAL Controladoras de Led VX 400/ VX 600 / VX 1000</span>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="container" style="max-width: 1280px"> 
+        <div class="row" style="float: left; width: 20%; margin-right: 20px;">
+            <div class="col-md-3 scrollspy" style="top: 150px">
+                <ul class="nav hidden-xs hidden-sm" data-spy="affix" id="nav" style="top: 150px;">
+                    <li class="active">
+                        <a href="#apresentacao">APRESENTAÇÃO</a>
+                        <ul class="nav">
+                            <li class>
+                            <a href="#vcan">V Can</a>
+                            <a href="#novalct">NovaLCT</a>
+                        </li>
+                        </ul>
+                    </li>
+            <li class="active">
+                        <a href="#hardware">HARDWARE</a>
+                        <ul class="nav">
+                            <li><a href="#conexoes">Conexões</a>
+                                <ul class="nav">
+                                    <li><a href="#via_cabo">Via cabo de rede</a></li>
+                                    <li><a href="#lan_fio">LAN com fio</a></li>
+                                    <li><a href="#wifi_ap">Wi-Fi AP</a></li>
+                                    <li><a href="#via_cabo_vcan">Conexão V Can Via Cabo de rede</a></li>
+                                    <li><a href="#wifi_ap_vcan">Conexão Wi-Fi AP</a></li>
+                                    <li><a href="#modelos_vcan">Modelos Compatíveis</a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#operacao_vcan">Operação</a>
+                                <ul class="nav">
+
+                                    <li><a href="#tela_inicial_vcan">Tela Inicial VCan</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+            <li class="active">
+                        <a href="#funcionalidades_vcan">FUNCIONALIDADES</a>
+                        <ul class="nav">
+                            <li><a href="#funcionalidades_vcan">Funcionalidades V Can</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+<div style="float: right; width: 84%;"> 
+<section id="introducao" class="introducao" data-titulo="Introdução">
+    <img src="../manual-interface-web-biot-main/img/intelbras_marca.svg" id="logoIntelbras" class="logo-introducao">
+    <p class="versao-manual">Versão deste manual: 1.00</p>
+    
+    <h1>Bem-vindo ao Manual das Controladoras de LED VX</h1>
+    <p>Este manual fornece informações detalhadas sobre a instalação, configuração e operação das controladoras de LED VX16s, VX400, VX600 e VX1000.</p>
+    
+    <section id="vcan" data-titulo="VCan">
+        <h2>V-Can Video Control Software</h2>
+        <p>
+            O <strong>V-Can</strong> é um software profissional desenvolvido para o gerenciamento e controle detalhado de vídeos em displays LED. Compatível com controladoras da linha VX (como VX400, VX600 e VX1000), ele permite:
+        </p>
+        
+        <h2>Instalação e Configuração</h2>
+        <ol>
+            <li><strong>Requisitos do Sistema:</strong>
+                <ul>
+                    <li>Windows 10/11 (64-bit)</li>
+                    <li>Processador Intel i5 ou superior</li>
+                    <li>8GB de RAM</li>
+                    <li>Placa de vídeo com suporte a OpenGL 2.0</li>
+                </ul>
+            </li>
+            <li><strong>Passo a Passo da Instalação:</strong>
+                <ol>
+                    <li>Baixe o instalador mais recente do site oficial</li>
+                    <li>Execute o arquivo de instalação</li>
+                    <li>Siga as instruções do assistente de instalação</li>
+                    <li>Reinicie o computador após a instalação</li>
+                </ol>
+            </li>
+            <li><strong>Configuração Inicial:</strong>
+                <ul>
+                    <li>Conecte a controladora ao computador via cabo de rede</li>
+                    <li>Abra o software V-Can</li>
+                    <li>Selecione o idioma preferido</li>
+                    <li>Configure as preferências de rede</li>
+                </ul>
+            </li>
+        </ol>
+        <ul>
+            <li>Ajuste fino das entradas de vídeo (resolução, taxa de quadros e configurações de cor);</li>
+            <li>Operação em modos distintos: <strong>Modo Direto</strong> para alterações imediatas e <strong>Modo Locação</strong> para pré-visualização antes de aplicar as configurações no painel;</li>
+            <li>Sincronização de múltiplos dispositivos, possibilitando a criação de layouts em Mosaic para grandes painéis;</li>
+            <li>Gerenciamento de fontes de vídeo com recurso de arrastar e soltar, facilitando a criação e edição de layouts personalizados;</li>
+            <li>Salvamento e carregamento de presets, otimizando a operação para diferentes cenários de instalação.</li>
+        </ul>
+        <p>
+            O V-Can é uma ferramenta indispensável para instalações que exigem controle preciso e flexível, garantindo a qualidade e a sincronização perfeita da exibição dos conteúdos.
+        </p>
+    </section>
+</section>
+
+<section id="controladores" data-titulo="Controladores">
+    <h1>Controladores LED</h1>
+    <p>Conheça os modelos disponíveis e suas especificações técnicas:</p>
+    <p>Os controladores LED da linha VX são dispositivos de alta performance projetados para gerenciar displays LED de diversos tamanhos e complexidades. Abaixo estão as principais características e especificações técnicas:</p>
+    
+    <section id="vx16s" data-titulo="VX16s">
+        <h2>Controlador VX16s</h2>
+        <ul>
+            <li><strong>Aplicação:</strong> Ideal para pequenos displays LED</li>
+            <li><strong>Resolução Máxima:</strong> 1920x1080 pixels</li>
+            <li><strong>Taxa de Atualização:</strong> Até 60Hz</li>
+            <li><strong>Interface:</strong> HDMI, DVI, VGA</li>
+            <li><strong>Consumo:</strong> 15W</li>
+        </ul>
+    </section>
+
+    <section id="vx400" data-titulo="VX400">
+        <h2>Controlador VX400</h2>
+        <ul>
+            <li><strong>Aplicação:</strong> Médias telas LED</li>
+            <li><strong>Resolução Máxima:</strong> 3840x2160 pixels</li>
+            <li><strong>Taxa de Atualização:</strong> Até 120Hz</li>
+            <li><strong>Interface:</strong> HDMI 2.0, DisplayPort</li>
+            <li><strong>Consumo:</strong> 25W</li>
+        </ul>
+    </section>
+
+    <section id="vx600" data-titulo="VX600">
+        <h2>Controlador VX600</h2>
+        <ul>
+            <li><strong>Aplicação:</strong> Grandes painéis LED</li>
+            <li><strong>Resolução Máxima:</strong> 4096x2160 pixels</li>
+            <li><strong>Taxa de Atualização:</strong> Até 144Hz</li>
+            <li><strong>Interface:</strong> HDMI 2.1, DisplayPort 1.4</li>
+            <li><strong>Consumo:</strong> 35W</li>
+        </ul>
+    </section>
+
+    <section id="vx1000" data-titulo="VX1000">
+        <h2>Controlador VX1000</h2>
+        <ul>
+            <li><strong>Aplicação:</strong> Mega displays LED</li>
+            <li><strong>Resolução Máxima:</strong> 7680x4320 pixels</li>
+            <li><strong>Taxa de Atualização:</strong> Até 240Hz</li>
+            <li><strong>Interface:</strong> HDMI 2.1, DisplayPort 1.4, SDI</li>
+            <li><strong>Consumo:</strong> 50W</li>
+        </ul>
+    </section>
+</section>
+
+<section id="novalct" data-titulo="NovaLCT">
+    <h1>Software NovaLCT</h1>
+    <p>O NovaLCT é uma solução completa para configuração e controle de displays LED. Compatível com diversos controladores, ele oferece ferramentas avançadas para:</p>
+    
+    <section id="instalacao_novalct" data-titulo="Instalação">
+        <h2>Instalação do NovaLCT</h2>
+        <ol>
+            <li><strong>Requisitos do Sistema:</strong>
+                <ul>
+                    <li>Windows 7/8/10/11 (64-bit)</li>
+                    <li>Processador Intel i5 ou superior</li>
+                    <li>4GB de RAM (8GB recomendado)</li>
+                    <li>Placa de vídeo com suporte a OpenGL 2.0</li>
+                </ul>
+            </li>
+            <li><strong>Passo a Passo:</strong>
+                <ol>
+                    <li>Baixe o instalador do site oficial</li>
+                    <li>Execute o arquivo de instalação</li>
+                    <li>Siga as instruções do assistente de instalação</li>
+                    <li>Reinicie o computador após a instalação</li>
+                </ol>
+            </li>
+        </ol>
+    </section>
+
+    <section id="configuracao_novalct" data-titulo="Configuração">
+        <h2>Configuração Inicial</h2>
+        <ul>
+            <li><strong>Conexão com Controladores:</strong>
+                <p>Conecte o computador ao controlador via cabo de rede ou Wi-Fi</p>
+            </li>
+            <li><strong>Detecção Automática:</strong>
+                <p>O NovaLCT detecta automaticamente os dispositivos conectados</p>
+            </li>
+            <li><strong>Configuração de Tela:</strong>
+                <p>Defina a resolução, taxa de atualização e parâmetros de exibição</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="funcionalidades_novalct" data-titulo="Funcionalidades">
+        <h2>Principais Funcionalidades</h2>
+        <ul>
+            <li><strong>Configuração de Telas:</strong> Suporte para telas regulares e irregulares</li>
+            <li><strong>Ajuste de Brilho:</strong> Controle individual ou em grupo</li>
+            <li><strong>Monitoramento:</strong> Visualização em tempo real do status dos painéis</li>
+            <li><strong>Atualização de Firmware:</strong> Manutenção simplificada dos controladores</li>
+        </ul>
+    </section>
+</section>
+
+<section id="instalacao" data-titulo="Instalação">
+    <h1>Instalação e Configuração</h1>
+    <div class="note">
+        <strong>Dica:</strong> Antes de iniciar a instalação, verifique se todos os cabos estão corretamente conectados e se a controladora está ligada.
+    </div>
+    <section id="conexoes" data-titulo="Conexões">
+        <h1>Conexões</h1>
+    <section id="via_cabo" data-titulo="via_cabo">
+        
+        <h3>Via Cabo de Rede</h3>
+        <p>Esta configuração utiliza uma conexão física entre a controladora VX e o computador para garantir estabilidade e alta velocidade de transmissão. Siga os passos abaixo:</p>
+        <ol>
+            <li><strong>Conecte o Cabo de Rede:</strong>
+                <p>Insira uma extremidade do cabo de rede na controladora VX e a outra no roteador ou diretamente no computador.</p>
+            </li>
+            <li><strong>Configuração de Rede:</strong>
+                <p>No computador, certifique-se de que a conexão está configurada para obter um endereço IP automaticamente (DHCP) ou configure manualmente, se necessário.</p>
+            </li>
+            <li><strong>Abra o Software:</strong>
+                <p>Inicie o <strong>V‑Can</strong> e verifique se a controladora foi detectada na lista de dispositivos.</p>
+            </li>
+            <li><strong>Teste a Conexão:</strong>
+                <p>Envie um conteúdo de teste para confirmar que a comunicação entre o computador e o painel LED está funcionando corretamente.</p>
+            </li>
+        </ol>
+    </section>
+    
+    <section id="lan_fio" data-titulo="lan_fio">
+        <h3>LAN com Fio</h3>
+        <p>A configuração LAN com fio é ideal para redes locais e ambientes corporativos. Siga os passos abaixo:</p>
+        <ul>
+            <li><strong>Conecte o Cabo de Rede:</strong>
+                <p>Conecte uma extremidade do cabo na controladora VX e a outra no switch ou roteador da rede local.</p>
+            </li>
+            <li><strong>Desative o DHCP (se necessário):</strong>
+                <p>Se preferir, desative o DHCP na controladora e configure um endereço IP estático.</p>
+            </li>
+            <li><strong>Configuração de Rede no Computador:</strong>
+                <p>No computador, configure um endereço IP na mesma faixa da controladora VX.</p>
+            </li>
+            <li><strong>Conexão com o Software:</strong>
+                <p>Abra o <strong>V‑Can</strong> e conecte-se à controladora utilizando o endereço IP configurado.</p>
+            </li>
+            <li><strong>Verificação:</strong>
+                <p>Envie um conteúdo de teste para confirmar que a controladora está respondendo corretamente.</p>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="wifi_ap" data-titulo="wifi_ap">
+        <h3>Wi-Fi AP</h3>
+        <p>O modo Wi-Fi AP permite que a controladora VX funcione como um ponto de acesso, facilitando conexões sem fio. Siga os passos abaixo:</p>
+        <ul>
+            <li><strong>Localize o SSID:</strong>
+                <p>Identifique o SSID da controladora (geralmente "AP" seguido de um código único). Essa informação pode estar disponível na etiqueta ou no manual da controladora.</p>
+            </li>
+            <li><strong>Conecte-se ao Wi-Fi:</strong>
+                <p>No computador ou dispositivo móvel, conecte-se à rede Wi-Fi usando o SSID e a senha padrão da controladora.</p>
+            </li>
+            <li><strong>Abra o Software:</strong>
+                <p>Inicie o <strong>V‑Can</strong> e verifique se a controladora aparece na lista de dispositivos conectados via rede sem fio.</p>
+            </li>
+            <li><strong>Configuração Inicial:</strong>
+                <p>Acesse as configurações da controladora e, se necessário, altere o SSID ou a senha para maior segurança.</p>
+            </li>
+            <li><strong>Teste a Conexão:</strong>
+                <p>Envie um conteúdo de teste para confirmar que a transmissão está funcionando corretamente.</p>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="via_cabo_vcan" data-titulo="via_cabo_vcan">
+        <h3>Conexão V‑Can Via Cabo de Rede</h3>
+        <p>A conexão por cabo de rede é recomendada para desempenho máximo e estabilidade. Siga as etapas abaixo:</p>
+        <ul>
+            <li><strong>Conecte o Cabo:</strong> Insira uma extremidade do cabo na controladora VX e a outra no roteador ou computador.</li>
+            <li><strong>Configuração de Rede:</strong> Configure o computador para obter um endereço IP automaticamente (DHCP) ou manualmente na mesma faixa da controladora.</li>
+            <li><strong>Abra o Software:</strong> Inicie o <strong>V‑Can</strong> e verifique se a controladora aparece na lista de dispositivos.</li>
+            <li><strong>Teste a Conexão:</strong> Envie um conteúdo de teste para confirmar o funcionamento correto da conexão.</li>
+        </ul>
+    </section>
+    
+    <section id="wifi_ap_vcan" data-titulo="wifi_ap_vcan">
+        <h3>Conexão V‑Can Via Wi-Fi AP</h3>
+        <p>O modo Wi-Fi AP permite configurar a controladora VX como um ponto de acesso. Siga os passos abaixo:</p>
+        <ol>
+            <li><strong>Ative o Wi-Fi AP:</strong> Verifique nas configurações da controladora se o modo AP está ativado e identifique o SSID.</li>
+            <li><strong>Conecte-se à Rede:</strong> No computador ou dispositivo móvel, conecte-se à rede Wi-Fi gerada pela controladora.</li>
+            <li><strong>Configuração Inicial:</strong> Acesse o <strong>V‑Can</strong> e ajuste as configurações de rede, como troca de senha ou personalização do SSID, se necessário.</li>
+        </ol>
+    </section>
+    
+    <section id="modelos_vcan" data-titulo="modelos_vcan">
+        <h2>Modelos Compatíveis</h2>
+        <p>O <strong>V‑Can</strong> é compatível com os seguintes modelos de controladoras da linha VX:</p>
+        <ul>
+            <li><strong>VX400:</strong> Ideal para pequenos displays LED, com suporte a resolução padrão.</li>
+            <li><strong>VX600:</strong> Suporte para telas médias e funcionalidades adicionais de ajuste de cores.</li>
+            <li><strong>VX1000:</strong> Perfeito para grandes painéis, com capacidade de processamento para vídeos em alta definição.</li>
+        </ul>
+        <p>Cada modelo oferece recursos específicos para atender a diferentes necessidades, garantindo flexibilidade e alto desempenho.</p>
+    </section>
+</section>
+<section id="operacao" data-titulo="Operação">
+    <h1>Operação e Funcionalidades</h1>
+<section id="operacao_vcan" data-titulo="Operação">
+    <h1>Operação</h1>
+<section id="tela_inicial_vcan" data-titulo="tela_inicial_vcan">
+    <h3>Tela Inicial - V-Can</h3>
+    <p>A interface do V-Can foi projetada para facilitar a operação e o gerenciamento dos displays LED. Aqui estão as principais áreas e funcionalidades:</p>
+    <ol>
+        <li><strong>Barra Superior:</strong> 
+            <ul>
+                <li><strong>File:</strong> Criar, abrir, salvar e exportar arquivos de configuração.</li>
+                <li><strong>Settings:</strong> Ajustes avançados, como idioma, sincronização de tempo, parâmetros de rede e modos de exibição.</li>
+                <li><strong>Tools:</strong> Ferramentas adicionais para diagnóstico, testes e calibração.</li>
+                <li><strong>Help:</strong> Acesso à documentação oficial, suporte técnico e verificação de atualizações do software.</li>
+            </ul>
+        </li>
+        <li><strong>Painel Central:</strong>
+            <p>Exibe informações detalhadas sobre os dispositivos conectados, como:</p>
+            <ul>
+                <li><strong>Status do dispositivo:</strong> Informações sobre conexão, IP e versão do firmware.</li>
+                <li><strong>Gerenciamento de fontes de vídeo:</strong> Lista de entradas disponíveis (HDMI, DP, DVI, etc.) e ajustes em tempo real.</li>
+                <li><strong>Configurações de resolução:</strong> Ajuste de tamanho, escala e proporção da imagem exibida.</li>
+                <li><strong>Alertas e logs:</strong> Diagnóstico de possíveis falhas e mensagens de status do sistema.</li>
+            </ul>
+        </li>
+        <li><strong>Menu Lateral:</strong> Acesso rápido a funções essenciais para otimizar a operação:
+            <ul>
+                <li><strong>Camadas e Layouts:</strong> Gerenciamento de múltiplas camadas de vídeo e presets de configuração.</li>
+                <li><strong>Calibração de Cores:</strong> Ajustes finos de brilho, contraste, temperatura de cor e saturação.</li>
+                <li><strong>Sincronização e Modo Mosaic:</strong> Controle de múltiplos dispositivos para composições em telas grandes.</li>
+                <li><strong>Configuração de Saída:</strong> Definição de parâmetros de saída para compatibilidade com diferentes painéis LED.</li>
+            </ul>
+        </li>
+    </ol>
+  <video controls style="width:100%; margin-top:20px;"> <source src="../img/Video Vcan/Vídeo VCAN Funções Básicas.mp4" type="video/mp4"> </video>
+    
+    <section id="troubleshooting" data-titulo="Solução de Problemas">
+    <h1>Solução de Problemas</h1>
+    <p>Guia para identificar e resolver problemas comuns:</p>
+    <ul>
+        <li><strong>Problema de conexão:</strong> Verifique os cabos e configurações de rede</li>
+        <li><strong>Problema de exibição:</strong> Verifique as configurações de resolução e taxa de atualização</li>
+        <li><strong>Problema de sincronização:</strong> Verifique as configurações de sincronização e firmware</li>
+    </ul>
+    
+        <section id="funcionalidades_vcan" data-titulo="funcionalidades_vcan" class="feature-overview">
+            <h3>Funcionalidades do V‑Can e Como Utilizá-las</h3>
+            <ol>
+                <li><strong>Gerenciamento de Fontes de Vídeo:</strong> O V‑Can permite conectar múltiplas fontes de entrada e alterná-las em tempo real.</li>
+                <li><strong>Criação e Uso de Presets:</strong> Os presets permitem salvar diferentes configurações de layout para troca rápida.</li>
+                <li><strong>Controle Remoto via Rede:</strong> O software pode controlar as controladoras VX conectadas via rede.</li>
+                <li><strong>Modo de Pré-visualização:</strong> Permite configurar e visualizar mudanças antes de aplicá-las ao painel LED.</li>
+                <li><strong>Atualização de Firmware:</strong> O V‑Can pode atualizar o firmware das controladoras VX para a versão mais recente.</li>
+            </ol>
+        <div class="quick-links">
+            <h3>Links Rápidos:</h3>
+            <ul>
+                <li><a href="#uso_avancado">Uso Avançado do V-Can</a></li>
+                <li><a href="#novidades_vCan">Funcionalidades Principais</a></li>
+                <li><a href="#tela_inicial_vcan">Interface do Usuário</a></li>
+                <li><a href="#conexoes">Configurações de Rede</a></li>
+            </ul>
+        </div>
+    
+        <section id="uso_avancado" data-titulo="Uso Avançado">
+    <h2>Guia Passo a Passo para Uso Avançado</h2>
+    
+    <h3>Gerenciamento de Fontes de Vídeo</h3>
+    <ol>
+        <li>Na barra superior, clique em "Sources"</li>
+        <li>Selecione o tipo de fonte desejada (HDMI, DVI, etc.)</li>
+        <li>Arraste a fonte para a área de exibição desejada</li>
+        <li>Ajuste as propriedades da fonte nas configurações laterais</li>
+    </ol>
+
+    <h3>Criação de Layouts Personalizados</h3>
+    <ol>
+        <li>No menu lateral, selecione "Layouts"</li>
+        <li>Escolha entre layouts predefinidos ou crie um novo</li>
+        <li>Arraste e solte as fontes nas áreas desejadas</li>
+        <li>Ajuste o tamanho e posição de cada área</li>
+        <li>Salve o layout como um preset para uso futuro</li>
+    </ol>
+
+    <h3>Calibração de Cores</h3>
+    <ol>
+        <li>No menu lateral, selecione "Color Calibration"</li>
+        <li>Escolha o modo de calibração (Manual ou Automático)</li>
+        <li>Para calibração manual, ajuste os valores de:
+            <ul>
+                <li>Brilho</li>
+                <li>Contraste</li>
+                <li>Temperatura de cor</li>
+                <li>Saturação</li>
+            </ul>
+        </li>
+        <li>Salve o perfil de cores para uso futuro</li>
+    </ol>
+
+    <h3>Sincronização de Múltiplos Dispositivos</h3>
+    <ol>
+        <li>Conecte todos os dispositivos na mesma rede</li>
+        <li>No menu "Devices", selecione todos os dispositivos</li>
+        <li>Escolha o modo de sincronização (Mosaic ou Espelhamento)</li>
+        <li>Configure as áreas de exibição para cada dispositivo</li>
+        <li>Teste a sincronização com conteúdo de teste</li>
+    </ol>
+
+    <h3>Gerenciamento de Presets</h3>
+    <ol>
+        <li>Configure todas as preferências desejadas</li>
+        <li>No menu superior, selecione "File" > "Save Preset"</li>
+        <li>Nomeie o preset de forma descritiva</li>
+        <li>Para carregar, selecione "File" > "Load Preset"</li>
+        <li>Organize os presets em pastas para fácil acesso</li>
+    </ol>
+               <h3>Links Rápidos:</h3>
+            <ul>
+                <li><a href="#func">Funcionalidades Principais</a></li>
+                <li><a href="#tela_inicial_vcan">Interface do Usuário</a></li>
+                <li><a href="#conexoes">Configurações de Rede</a></li>
+            </ul>
+            </div>
+            </section>
+            </div>
+            </div>
+        </section>
+            
+        </div>
+        <div>
+       
+            
+    </section>
+          
+        </section> 
+    </section>
+</section>
+<!----- Based on the user's feedback, I'll restructure the content to move the functionalities section below the "Tela Inicial VCan" section. Here are the necessary changes: --->
+
+<footer class="footer">
+      <div class="container">
+              <p>© 2025 Intelbras S/A</p>
+    </div>
+</footer>

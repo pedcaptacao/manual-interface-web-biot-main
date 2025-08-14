@@ -1186,4 +1186,20 @@ section.fale-com-a-gente{
     margin-left: 0 !important;
     flex-direction: column;
   }
+
+.titleOptionMenuManual {
+    color: #333333; /* Um cinza bem escuro, quase preto. Pode usar "black" se preferir. */
+    font-weight: bold; /* Opcional: deixa o texto em negrito para dar mais destaque. */
+}
+
+/* 2. Ajusta a barra cinza do título para parecer mais preenchida e profissional */
+.panel-heading {
+    padding: 15px; /* Aumenta o espaçamento interno (altura) da barra cinza. */
+    align-items: center; /* Garante que o texto fique bem alinhado verticalmente. */
+}
+
+.panel-heading-left {
+    font-size: 1.2em; /* Aumenta um pouco o tamanho da fonte do título (ex: "Manual Controladoras..."). */
+    font-weight: bold; /* Deixa o texto do título em negrito. */
+}
 }

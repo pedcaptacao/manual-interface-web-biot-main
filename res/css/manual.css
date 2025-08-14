@@ -522,7 +522,7 @@ p.high{
 }
 
 p.high.ale{
-  background-image: url(../img/ico_alerta.svg);
+  background-image: url(../img/ico-alerta.svg);
   background-color: #efedd1;
   border: 1px solid #efedd1;
 }

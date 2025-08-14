@@ -321,6 +321,7 @@ button.manual-btn {
 }
 .input.bloqueado{
   border-bottom: none;
+  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
 }
@@ -956,10 +957,6 @@ footer p {
   padding: 15px;
 }
 
-.resize-image {
-  
-}
-
 .menuManual {
   overflow: hidden;
   margin: 50px auto;
@@ -1158,6 +1155,7 @@ section.fale-com-a-gente{
   display: flex;
   max-width: 1280px;
   margin: auto;
+  margin-left: 240px !important; /* Espaço para a sidebar */
 }
 
 /* Sidebar fixo para evitar sobreposição */
@@ -1165,35 +1163,27 @@ section.fale-com-a-gente{
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: 220px;
+  min-width: 180px;
+  max-width: 260px;
   height: 100vh;
   overflow-y: auto;
-  background: #e2e9ef;
+  background: #f8f9fa;
   padding: 10px;
   transition: width 0.3s ease-in-out;
   z-index: 1000;
 }
 
-/* Ajuste do conteúdo principal para evitar sobreposição */
-#main-content {
-  margin-left: 260px;
-  flex-grow: 1;
-  padding: 15px;
-  transition: margin-left 0.3s ease-in-out;
-}
-
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-  }
-  
+@media (max-width: 992px) {
   .scrollspy {
-      width: 0;
-      overflow: hidden;
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow-y: visible;
   }
-  
-  #main-content {
-      margin-left: 0;
+  .container {
+    margin-left: 0 !important;
+    flex-direction: column;
   }
 }

@@ -1187,19 +1187,52 @@ section.fale-com-a-gente{
     flex-direction: column;
   }
 
+/* 1. Altera a cor do texto dos modelos para preto e adiciona negrito */
 .titleOptionMenuManual {
-    color: #333333; /* Um cinza bem escuro, quase preto. Pode usar "black" se preferir. */
-    font-weight: bold; /* Opcional: deixa o texto em negrito para dar mais destaque. */
+    color: black !important; /* Força a cor preta */
+    font-weight: bold;
 }
 
-/* 2. Ajusta a barra cinza do título para parecer mais preenchida e profissional */
+/* 2. Aumenta a altura e o espaçamento das barras de título */
 .panel-heading {
-    padding: 15px; /* Aumenta o espaçamento interno (altura) da barra cinza. */
-    align-items: center; /* Garante que o texto fique bem alinhado verticalmente. */
+    padding: 15px 20px; /* Adiciona mais espaço interno (altura e largura) */
+    background-color: #e9ecef; /* Um cinza um pouco mais claro e moderno */
+    border-bottom: 1px solid #dee2e6; /* Adiciona uma linha sutil na parte inferior */
+}
+
+/* 3. Melhora o estilo do texto do título */
+.panel-heading-left {
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-weight: 600; /* Deixa a fonte em negrito (semi-bold) */
+    color: #343a40; /* Um cinza escuro para o texto do título */
+}
+a .titleOptionMenuManual {
+    color: black !important;
+    font-weight: bold;
+}
+
+.panel-heading {
+    background-color: #8F98A2 !important;
+    color: #FFF !important;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px !important;
+    border-radius: 0 !important; /* remove cantos arredondados */
+    margin: 0 !important; /* remove espaçamento */
+}
+
+.panel {
+    border-radius: 0 !important; /* painel reto */
 }
 
 .panel-heading-left {
-    font-size: 1.2em; /* Aumenta um pouco o tamanho da fonte do título (ex: "Manual Controladoras..."). */
-    font-weight: bold; /* Deixa o texto do título em negrito. */
+    flex: 1;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 !important;
+    margin: 0 !important;
 }
+
+
 }

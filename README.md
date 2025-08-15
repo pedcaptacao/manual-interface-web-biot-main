@@ -1,7 +1,7 @@
 # Manual Web - Controladoras de LED Intelbras
 
 ## Sobre o Projeto
-
+## USAR O MASTER POIS ESTA CORRIGIDO
 Este projeto é um manual digital e interativo, desenvolvido para fornecer suporte técnico e informações detalhadas sobre as controladoras de LED da Intelbras, incluindo as séries TB, VX e MCTRL. A aplicação é construída com HTML, CSS e JavaScript puros, e está hospedada via GitHub Pages para garantir alta disponibilidade e fácil atualização.
 
 O site está estruturado para oferecer uma navegação intuitiva, permitindo que técnicos e usuários encontrem rapidamente as informações de que precisam.

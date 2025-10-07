@@ -9,7 +9,7 @@
 
     gtag('config', 'xxxxxx');
     </script>
-    <title> Manual Interface Web - Controladora De Led - TB2-TB50-TB60</title>
+    <title> Manual Interface Web - Controladora De Led - TB20 PLUS-TB2-TB50-TB60</title>
      <link href="res/img/favicon.ico" rel="shortcut icon"/>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -80,7 +80,7 @@
               const secao = document.querySelector(this.getAttribute('href')); // Obtém a seção pelo ID
 
               if (secao && secao.dataset.titulo) { // Verifica se a seção e o atributo data-titulo existem
-                document.title = ' TB2-TB50-TB60 ' + secao.dataset.titulo; // Atualiza o título da página
+                document.title = 'TB20 PLUS-TB2-TB50-TB60 ' + secao.dataset.titulo; // Atualiza o título da página
 
                 // Rola suavemente até a seção correspondente
                 secao.scrollIntoView({ behavior: 'smooth' });
@@ -99,26 +99,26 @@
             <div class="logo">
                 <a href="index.html">
                     <figure>
-                        <img class="nav-img" src="res/img/intelbras-marca.svg">
+                        <img class="nav-img" src="res/img/intelbras-marca.svg" alt="Logo Intelbras">
                     </figure>
                 </a>
       </div>
             <div class="iconMenu">
-                <a id="toggleMenu">
-                    <img src="res/img/menu.svg">
+                <a id="toggleMenu" href="#">
+                    <img src="res/img/menu.svg" alt="Ícone de Menu">
                 </a>
             </div>
             <div style="float: right; top: 16px; position: relative;">
                 <div id="google_translate_element"></div>
 
                 <a href="#" onClick="window.print()">
-                    <img src="res/img/pdf.svg">
+                    <img src="res/img/pdf.svg" alt="Imprimir como PDF">
                 </a>
             </div>
         </nav>
         <ul style="list-style-type: none;">
             <li  id="op1" class="nav-header">
-                <span class="h2">MANUAL Controladoras de Led TB 2 /TB 50/TB 60 </span>
+                <span class="h2">MANUAL Controladoras de Led TB 20 PLUS / TB 2 / TB30 /TB 50 / TB 60 </span>
             </li>
         </ul>
     </div>
@@ -149,11 +149,10 @@
                                 <li><a href="#viplex_express_login">ViPlex Express (Async Mode)</a></li>
                                 <li><a href="#novalct_login">NovaLCT</a></li>
                                 <li><a href="#viplex_handy_login">ViPlex Handy</a></li>
-
+                            </ul>
+                        </li>
                         <li class = "active"><a href="#tela_inicial_viplex">Tela Inicial Viplex </a></li>
                         <li class = "active" ><a href="#tela_inicial_novaLCT">Tela Inicial NovaLCT</a></li>
-                    </ul>
-                </li>
                     </ul>
                 </li>
                 <li class = "active">
@@ -178,20 +177,20 @@
 
 <div style="float: right; width: 84%;">
 <section id="apresentacao" class="apresentacao" data-titulo="apresentacao">
-    <img src="res/img/intelbras-marca.svg" id="logoIntelbras" class="logo-apresentacao">
+    <img src="res/img/intelbras-marca.svg" id="logoIntelbras" class="logo-apresentacao" alt="Logo Intelbras">
     <p class="versao-manual">Versão deste manual: 1.00</p>
-    <section id="viplexexpress" data-titulo="viplex_express"></section>
-    <h1>Viplex Express</h1>
+    <section id="viplexexpress" data-titulo="viplex_express">
+        <h1>ViPlex Express</h1>
 
-        <p>O <strong><a href="https://en-website001.oss-us-east-1.aliyuncs.com/ViPlex%20Express%20V3.0.0.3401%20Setup(X64).zip">ViPlex</a></strong> é uma solução indicada pela Intelbras e projetada para o gerenciamento de conteúdo em displays LED, permitindo a edição e reprodução de informações de forma eficiente em ambientes corporativos e comerciais.
-          Este software é compatível com as controladoras da linha TB, incluindo modelos como TB2, TB50 e TB60.</p>
+        <p>O <strong><a href="https://en-website001.oss-us-east-1.aliyuncs.com/ViPlex%20Express%20V3.0.0.3401%20Setup(X64).zip" target="_blank">ViPlex</a></strong> é uma solução indicada pela Intelbras e projetada para o gerenciamento de conteúdo em displays LED, permitindo a edição e reprodução de informações de forma eficiente em ambientes corporativos e comerciais.
+          Este software é compatível com as controladoras da linha TB, incluindo modelos como a TB20 PLUS, TB2, TB50 e TB60.</p>
         <p>Com uma plataforma web interativa, o ViPlex oferece aos operadores a capacidade de personalizar a ambientação conforme as necessidades específicas de cada perfil, garantindo uma experiência de uso intuitiva e confortável. A interface é amigável e facilita o acesso a diversas funcionalidades.</p>
         <p>Para acessar a Interface Web do ViPlex, é necessário que o dispositivo esteja conectado à mesma rede que o computador. O acesso é feito através do endereço IP do dispositivo, simplificando a gestão e a atualização de conteúdos em tempo real.</p>
     </section>
-    <h2>NovaLCT</h2>
-    <section id="novalct">
-         <p>O <strong><a href="https://en-website001.oss-us-east-1.aliyuncs.com/NovaLCT%20V5.5.0.zip">NovaLCT</a></strong> é uma solução da novastar projetada para o gerenciamento de conteúdo em displays de LED,calibração e ajustes avançados.
-         Este software é compatível com as controladoras da linha TB, incluindo modelos como TB2, TB50 e TB60.</p>
+    <section id="novalct" data-titulo="NovaLCT">
+        <h2>NovaLCT</h2>
+        <p>O <strong><a href="https://en-website001.oss-us-east-1.aliyuncs.com/NovaLCT%20V5.5.0.zip" target="_blank">NovaLCT</a></strong> é uma solução da Novastar projetada para o gerenciamento de conteúdo em displays de LED, calibração e ajustes avançados.
+         Este software é compatível com as controladoras da linha TB, incluindo modelos como a TB20 PLUS, TB2, TB50 e TB60.</p>
     </section>
 </section>
 
@@ -270,7 +269,7 @@
             <p>1. Abra o ViPlex Express e vá para a página <em>Screens</em>.</p>
             <p>2. Clique em <em>Refresh</em> para atualizar a lista de dispositivos.</p>
             <p>3. Selecione a controladora e clique em <em>Connect</em>. Digite a senha padrão "admin" e clique em OK.</p>
-            <img src="res/img/tbs/login-viplex-express.png" class="img-fluid">
+            <img src="res/img/tbs/login-viplex-express.png" class="img-fluid" alt="Tela de login do ViPlex Express.">
         </section>
 
         <section id="novalct_login" data-titulo="novalct_login">
@@ -278,7 +277,7 @@
             <p>1. Abra o NovaLCT e vá para o menu <em>User > Media Player Login</em>.</p>
             <p>2. Na caixa de diálogo <em>Terminal List</em>, clique em <em>Refresh</em>.</p>
             <p>3. Selecione a controladora e clique em <em>Connect System</em>. Digite o nome de usuário "admin" e a senha padrão.</p>
-            <img src="res/img/tbs/login-controladora-novalct.png" class="img-fluid">
+            <img src="res/img/tbs/login-controladora-novalct.png" class="img-fluid" alt="Tela de login do NovaLCT para a controladora.">
         </section>
 
         <section id="viplex_handy_login" data-titulo="viplex_handy_login">
@@ -286,95 +285,342 @@
             <p>1. Abra o ViPlex Handy e vá para a página <em>Local Devices</em>.</p>
             <p>2. Atualize a lista de dispositivos locais e selecione a controladora desejada. Clique em <em>Connect</em> e insira as credenciais.</p>
             <p>
-                <a href="https://youtube.com/shorts/VdXvhj9sB_M?si=4Byklq5SSfn134AE" target="_blank">Assista ao vídeo no YouTube</a>
+                <a href="https://youtube.com/shorts/VdXvhj9sB_M?si=4Byklq5SSfn134AE" target="_blank" rel="noopener noreferrer">Assista ao vídeo no YouTube</a>
             </p>
         </section>
+    </section>
 
     <section id="tela_inicial_viplex" data-titulo="tela_inicial_viplex">
-        <h2>Tela Inicial Viplex</h2>
-        <p>Após a instalação, a página inicial exibe as controladoras disponiveis, menu superior e os atalhos, permitindo o gerenciamento completo das funções do dispositivo.</p>
-        <img src="res/img/tbs/tela-inicial-viplex.png" class="img-fluid">
-        <li><strong>Menu Superior:</strong>
-            <ul>
-                <li><strong>Screens:</strong> Exibe todos os dispositivos conectados, com informações como status de conexão, nome do dispositivo e armazenamento disponível.</li>
-                <li><strong>Solutions:</strong> Permite criar, editar e organizar conteúdos, como imagens, vídeos e layouts personalizados.</li>
-                <li><strong>Control:</strong> Ajuste as preferências do software, incluindo idioma, sincronização de horário, modo de exibição e atualizações automáticas.</li>
-            </ul>
-        </li>
-        <li><strong>Screens:</strong>
-            <p>Localizado na página inicial da tela, este painel exibe os dispositivos , como:</p>
-            <ul>
-                <li>Status da conexão (online/offline/not logged/Total)</li>
-                <li>Ip,nome dos dispositivos e a resolução das controladoras</li>
-                <li>Controladoras atualmente em execução</li>
-            </ul>
-        </li>
-        <li><strong>Solutions:</strong>
-            <p>Localizado à direita de Screens , este menu oferece atalhos para as principais funções:</p>
-            <ul>
-                <li><strong>Adicionar layout de exibição(New -> Regular Screen):</strong> Crie layouts com imagens para exibir no painel de Led desejado,edite podendo incluir horários específicos e transições animadas.</li>
-                <li><strong>Criar:</strong></li>
+        <h2>Tela Inicial ViPlex Express</h2>
+        <p>Após a instalação e login bem-sucedido, a página inicial do ViPlex Express exibe as controladoras disponíveis, um menu superior de navegação e atalhos rápidos. Essa interface permite o gerenciamento completo das funções do dispositivo de maneira intuitiva.</p>
+        <img src="res/img/tbs/tela-inicial-viplex.png" class="img-fluid" alt="Visão geral da tela inicial do ViPlex Express com menus e painéis">
 
-                <img src="res/img/tbs/criando-midia.png" alt="Criando midia ViPlex Express" style="width:75%; margin-top:20px;">
-         </ul>
+        <h3>Menu Superior</h3>
+        <p>O menu superior é o ponto de acesso para as três principais áreas de funcionalidade do ViPlex Express:</p>
+        <ul>
+            <li><strong>Screens:</strong> Exibe todos os dispositivos conectados, com informações como status de conexão, nome do dispositivo e armazenamento disponível. É o ponto de partida para conectar e monitorar as controladoras.</li>
+            <li><strong>Solutions:</strong> A área dedicada à criação, edição e organização de conteúdos para os displays LED, incluindo imagens, vídeos e layouts personalizados.</li>
+            <li><strong>Control:</strong> Permite o ajuste das preferências e configurações avançadas do software e da controladora, como idioma, sincronização de horário, controle de brilho e atualizações.</li>
+        </ul>
 
-       <li><strong>Control:</strong>
-         <p>Localizado à direita de Schedule , este menu oferece atalhos para mais configurações de ajustes do software:</p>
-         <li><strong>Play logs :</strong> Acesse os logs das mídias onde é possível ter um relatório geral de exibição do arquivo de mídia , com data e hora que foi exibida a mídia,exporte essas informações para CSV ou excel para melhor controle da sua controladora.</li>
-         <img src="res/img/tbs/play-logs.png" alt="Log do app" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/play-logs1.9.png" alt="Log do app" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/play-logs2.png" alt="Log do app" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/play-logs2.2.png" alt="Log do app" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/play-logs2.3.png" alt="Log do app" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/play-logsexport2.4.png" alt="Log do app" style="width:75%; margin-top:20px;">
-         <li><strong>Playback Management:</strong> Atualize os conteúdos e verifique se as alterações foram aplicadas aos dispositivos conectados.</li>
-         <img src="res/img/tbs/playback-management.png" alt="Tocar midias" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/view-screenshot.png" alt="visualizar midia" style="width:75%; margin-top:20px;">
-         <li><strong>Network Configuration:</strong> Verifique a rede em que se encontra as controladoras online no Viplex e logadas,possibilitando ter Informações sobre o tipo de conexão do aparelho </li>
-         <img src="res/img/tbs/network-connection.png" alt="Conexão de rede" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/wifi-network.png" alt="wifi" style="width:75%; margin-top:20px;">
-         <li><strong>Brightness adjustment:</strong> Ajuste o brilho da imagem conforme a sua prêferencia de acordo com o horário</li>
-         <img src="res/img/tbs/brightness-ajustment1.png" alt="Ajuste de brilho 1" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/brightnessadjustment2.png" alt="Ajuste de brilho 2" style="width:75%; margin-top:20px;">
-         <li><strong>Video source:</strong> Controle a resolução de exibição seu conteudo e o tipo de transmissão desejado</strong></li>
-         <img src="res/img/tbs/videosource.png" alt="Videosource" style="width:75%; margin-top:20px;">
-         <li><strong>Screen status control:</strong> Apague a imagem do seu painel no momento que preferir, e programe a duração de tempo para alternar entre o conteúdo setado e o blackout do painel </li>
-         <img src="res/img/tbs/screen-status1.png" alt="Status da tela ViPlex Express" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/screen-status2.png" alt="Criando midia ViPlex Express" style="width:75%; margin-top:20px;">
-         <li><strong>Restart configuration:</strong> Faça o reset da controladora diariamente ou nos horarios e espaços de tempo que preferir </li>
-         <img src="res/img/tbs/restart-configuration.png" alt="Reiniciar mídia ViPlex Express" style="width:75%; margin-top:20px;">
-         <li><strong>Color temperature: A controladora possui 3 modos de temperatura de cores "natural white,standard white e cold white" </strong></li>
-         <img src="res/img/tbs/color-temperature.png" alt="Temperatura de cor da midia ViPlex Express" style="width:75%; margin-top:20px;">
-         <li><strong>Monitoring:</strong> Para monitorar o uso de memória,CPU da controladora e para limpar o espaço usado com as mídias ,além de que se estiver conectado a um sensor de luminosidade,é possivel ver o status de luminosidade do ambiente e possibilita o ajuste de luminosidade do painel de LED</li>
-         <img src="res/img/tbs/monitoring.png" alt="Monitoramento da midia no ViPlex Express" style="width:75%; margin-top:20px;">
-         <li><strong>Font Management:</strong> Possui as fontes disponiveis que está instalada na máquina,pode ser adicionado novas fontes para usar nas mídias , desde que baixado e instalado no computador </li>
-         <img src="res/img/tbs/font-management.png" alt="control no Viplex Express" style="width:75%; margin-top:20px;">
-         <img src="res/img/tbs/font-management-entrar.png" alt="Dentro da função do font_management" style="width:75%; margin-top:20px;">
+        <h4>Painel "Screens" (Visão Geral)</h4>
+        <p>Localizado na página inicial, este painel oferece uma visão rápida do status dos seus dispositivos:</p>
+        <ul>
+            <li>**Status da conexão:** Indica se as controladoras estão online, offline, não logadas ou o total de dispositivos.</li>
+            <li>**Informações do dispositivo:** Mostra o endereço IP, nome e resolução de cada controladora.</li>
+            <li>**Controladoras em execução:** Lista as controladoras que estão ativas e reproduzindo conteúdo.</li>
+        </ul>
 
-         <li><strong>Player Upgrade:</strong> Para verificar se possui atualizações da controladora,e atualizar para uma nova versão quando disponivel diretamente do site ou de arquivos do computador , podendo ser baixado no site da Novastar</li>
-         <img src="res/img/tbs/player-upgrade.png" alt="Upgrade da controladora" style="width:75%; margin-top:20px;">
-         <li><strong>Player Information:</strong> O player information, mostra as informações do hardware e do software que está sendo exibido a mídia </li>
-         <img src="res/img/tbs/player-information.png" alt="Informação do player do ViPlex Express" style="width:75%; margin-top:20px;">
-         <li><strong>Multi-Screen Mosaic:</strong> Quando possui mais de uma tela conectada via HDMI à controladora é possível criar um mosaico com as telas conectadas </li>
-         <img src="res/img/tbs/mosaico.png" alt="Criando mosaico de midia no ViPlex Express" style="width:75%; margin-top:20px;">
-         <div class="alert alert-info">
-            <li><strong>Obs:</strong> Não é possível com a TB2 criar mosaico de telas,pois a controladora não possui saída HDMI</li>
-         </div>
+        <h3>Área "Solutions" (Criação e Gestão de Conteúdo)</h3>
+        <p>A área "Solutions" é onde você gerencia os programas que serão exibidos nos painéis de LED. É aqui que novos layouts são criados e o conteúdo é organizado.</p>
+        
+        <section id="criar_layout_viplex" data-titulo="criar_layout_viplex">
+            <h4>Adicionar layout de exibição (New -> Regular Screen)</h4>
+            <p>Esta função permite criar um novo programa ou "solução" para o seu painel de LED. Você pode combinar diferentes tipos de mídia (imagens, vídeos, textos) em um layout personalizado e definir como eles serão exibidos.</p>
+            <h5>Passo a passo para criar um novo layout:</h5>
+            <ol>
+                <li><strong>Acessar "Solutions":</strong> No menu superior, clique em **"Solutions"**.</li>
+                <li><strong>Criar Novo Programa:</strong> Clique no botão **"New"** e selecione **"Regular Screen"** no menu suspenso.</li>
+                <li><strong>Definir Propriedades do Layout:</strong>
+                    <ul>
+                        <li>Insira um **Nome** para o seu layout.</li>
+                        <li>Defina a **Resolução** (largura x altura) do layout, que deve corresponder à resolução do seu painel de LED para melhor qualidade.</li>
+                        <li>Clique em `OK`.</li>
+                    </ul>
+                </li>
+                <li><strong>Adicionar Elementos de Mídia:</strong>
+                    <ul>
+                        <li>No editor de layout que se abre, você verá uma tela em branco. À direita ou em um painel lateral, haverá opções para adicionar mídia.</li>
+                        <li><strong>Imagens e Vídeos:</strong> Clique no ícone de "Imagem" ou "Vídeo" e navegue até os arquivos em seu computador. Arraste e solte-os na tela do layout.</li>
+                        <li><strong>Texto:</strong> Clique no ícone de "Texto" para criar uma caixa de texto. Digite sua mensagem, ajuste fonte, cor, tamanho e posição.</li>
+                        <li><strong>Outros Widgets:</strong> Adicione elementos como relógios digitais, contadores, ou transmissões de RSS, se disponíveis.</li>
+                    </ul>
+                </li>
+                <li><strong>Organizar e Editar Elementos:</strong>
+                    <ul>
+                        <li>Clique e arraste os elementos para ajustar sua posição e tamanho no layout.</li>
+                        <li>Para cada elemento, você pode ajustar propriedades como duração de exibição, efeitos de entrada/saída, e camadas (para sobrepor elementos).</li>
+                    </ul>
+                </li>
+                <li><strong>Salvar o Layout:</strong> Após configurar, clique em **"Save"** para guardar suas alterações.</li>
+            </ol>
+            <img src="res/img/tbs/criando-midia.png" alt="Interface do ViPlex Express mostrando a criação de um novo layout com elementos de mídia." style="width:75%; margin-top:20px;">
+        </section>
 
-         <img src="res/img/tbs/control.png" alt="Controle de configurações do ViPlex Express" style="width:75%; margin-top:20px;">
+        <h3>Área "Control" (Configurações e Monitoramento)</h3>
+        <p>A área "Control" oferece acesso a diversas configurações avançadas e ferramentas de monitoramento para o software e as controladoras de LED.</p>
+         
+        <section id="play_logs_viplex" data-titulo="play_logs_viplex">
+            <h4>Play logs</h4>
+            <p>O recurso "Play logs" permite visualizar um relatório detalhado sobre a reprodução das mídias em suas controladoras. É uma ferramenta essencial para auditoria e controle de conteúdo.</p>
+            <h5>Como utilizar Play logs:</h5>
+            <ol>
+                <li><strong>Acessar Play logs:</strong> No menu superior, clique em **"Control"** e selecione **"Play logs"**.</li>
+                <li><strong>Consultar Logs:</strong> Na tela de logs, você pode filtrar por data, hora ou controladora para encontrar informações específicas.</li>
+                <li><strong>Visualizar Detalhes:</strong> Cada entrada de log mostra qual mídia foi exibida, em qual data e horário, e em qual controladora.</li>
+                <li><strong>Exportar Relatório:</strong> Clique na opção **"Export"** para salvar o relatório em formato CSV ou Excel, facilitando a análise externa e o arquivamento.</li>
+            </ol>
+            <p>Aqui estão algumas telas de exemplo dos logs:</p>
+            <img src="res/img/tbs/play-logs.png" alt="Tela de Play Logs do ViPlex Express" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/play-logs1.9.png" alt="Detalhe do Play Logs com opções de filtragem" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/play-logs2.png" alt="Visualização expandida de um item de log" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/play-logs2.2.png" alt="Outra visualização de detalhes de log" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/play-logs2.3.png" alt="Opções de exportação de log" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/play-logsexport2.4.png" alt="Confirmação de exportação de log" style="width:75%; margin-top:20px;">
+        </section>
 
+        <section id="playback_management_viplex" data-titulo="playback_management_viplex">
+            <h4>Playback Management</h4>
+            <p>Gerencie o status de reprodução e assegure que o conteúdo mais recente seja exibido. É onde você verifica se as mídias foram enviadas e estão ativas nos displays.</p>
+            <h5>Como utilizar Playback Management:</h5>
+            <ol>
+                <li><strong>Acessar Playback Management:</strong> No menu superior, clique em **"Control"** e selecione **"Playback Management"**.</li>
+                <li><strong>Atualizar Conteúdo:</strong> Selecione a controladora e clique em **"Update Content"** para enviar as últimas alterações de layout ou mídia.</li>
+                <li><strong>Verificar Status:</strong> A tela mostra o status de cada programa (em reprodução, pausado, erro) e o progresso da transferência.</li>
+                <li><strong>Visualizar Screenshot:</strong> Use a opção **"View Screenshot"** para obter uma captura de tela em tempo real do que está sendo exibido no painel de LED, confirmando que o conteúdo está correto.</li>
+            </ol>
+            <img src="res/img/tbs/playback-management.png" alt="Tela de gerenciamento de reprodução do ViPlex Express" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/view-screenshot.png" alt="Visualização de captura de tela de um painel de LED" style="width:75%; margin-top:20px;">
+        </section>
 
+        <section id="network_configuration_viplex" data-titulo="network_configuration_viplex">
+            <h4>Network Configuration</h4>
+            <p>Configure as opções de rede das controladoras, seja para conectividade com ou sem fio. Essencial para garantir a comunicação entre o software e o painel de LED.</p>
+            <h5>Como utilizar Network Configuration:</h5>
+            <ol>
+                <li><strong>Acessar Network Configuration:</strong> No menu superior, clique em **"Control"** e selecione **"Network Configuration"**.</li>
+                <li><strong>Configurar Ethernet (Cabo de Rede):</strong>
+                    <ul>
+                        <li>Para conexão via cabo, você pode definir se a controladora obterá um endereço IP automaticamente (DHCP) ou configurar um IP estático.</li>
+                        <li>Um IP estático garante que o endereço da controladora não mude, o que é ideal para acesso remoto.</li>
+                    </ul>
+                </li>
+                <li><strong>Configurar Wi-Fi:</strong>
+                    <ul>
+                        <li>Se a controladora suporta Wi-Fi, você pode configurá-la como Ponto de Acesso (AP) ou conectá-la a uma rede Wi-Fi existente (Modo Cliente/STA).</li>
+                        <li>No modo AP, a controladora cria sua própria rede Wi-Fi para conexão direta.</li>
+                        <li>No modo Cliente/STA, a controladora se conecta à rede Wi-Fi local existente.</li>
+                    </ul>
+                </li>
+                <li><strong>Verificar Conexão:</strong> Após as alterações, verifique o status da conexão para garantir que a controladora está online.</li>
+            </ol>
+            <img src="res/img/tbs/network-connection.png" alt="Tela de configuração de rede Ethernet no ViPlex Express" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/wifi-network.png" alt="Tela de configuração de rede Wi-Fi no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
 
+        <section id="brightness_adjustment_viplex" data-titulo="brightness_adjustment_viplex">
+            <h4>Brightness Adjustment</h4>
+            <p>Ajuste o brilho do painel de LED para adequar-se às condições de luminosidade do ambiente ou às suas preferências. Isso pode ser feito manualmente ou de forma programada.</p>
+            <h5>Como utilizar Brightness Adjustment:</h5>
+            <ol>
+                <li><strong>Acessar Brightness Adjustment:</strong> No menu superior, clique em **"Control"** e selecione **"Brightness Adjustment"**.</li>
+                <li><strong>Ajuste Manual:</strong>
+                    <ul>
+                        <li>Use uma barra deslizante para aumentar ou diminuir o brilho em tempo real.</li>
+                        <li>Ideal para ajustes rápidos e pontuais.</li>
+                    </ul>
+                </li>
+                <li><strong>Ajuste Programado (Automático):</strong>
+                    <ul>
+                        <li>Configure horários específicos para que o brilho seja ajustado automaticamente ao longo do dia (ex: mais intenso durante o dia, mais suave à noite).</li>
+                        <li>Se houver um sensor de luminosidade conectado, configure o ajuste automático baseado na luz ambiente para uma experiência dinâmica e economizar energia.</li>
+                    </ul>
+                </li>
+            </ol>
+            <img src="res/img/tbs/brightness-ajustment1.png" alt="Interface de ajuste manual de brilho do ViPlex Express" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/brightnessadjustment2.png" alt="Interface de ajuste programado de brilho do ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
 
-            </ul>
-        </li>
+        <section id="video_source_viplex" data-titulo="video_source_viplex">
+            <h4>Video Source</h4>
+            <p>Controle a fonte de entrada de vídeo da controladora, definindo qual conteúdo será exibido no painel de LED e em qual resolução.</p>
+            <h5>Como utilizar Video Source:</h5>
+            <ol>
+                <li><strong>Acessar Video Source:</strong> No menu superior, clique em **"Control"** e selecione **"Video Source"**.</li>
+                <li><strong>Selecionar Fonte de Entrada:</strong>
+                    <ul>
+                        <li>Escolha entre as fontes de vídeo disponíveis, como a mídia interna da controladora ou uma entrada externa (ex: HDMI, se disponível e conectado).</li>
+                    </ul>
+                </li>
+                <li><strong>Ajustar Resolução:</strong>
+                    <ul>
+                        <li>Configure a resolução e a taxa de atualização para a fonte de vídeo selecionada, garantindo que correspondam às especificações do seu painel e do conteúdo.</li>
+                    </ul>
+                </li>
+            </ol>
+            <img src="res/img/tbs/videosource.png" alt="Interface de seleção de fonte de vídeo e ajuste de resolução no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
 
-        <li><strong>Pré-visualização:</strong>
-            <p>Dentro da mídia que você preparou,ao lado esquerdo de "View Schedule", há uma área de pré-visualização onde pode simular a exibição dos conteúdos antes de enviá-los ao painel LED. Utilize esta ferramenta para validar o design e as animações.</p>
-            <p>A mídia possui diversas opções </p>
-            <img src="res/img/tbs/pre-visualizar.png" alt="Pré visualizar " class="img-fluid" style="margin-top:20px;">
+        <section id="screen_status_control_viplex" data-titulo="screen_status_control_viplex">
+            <h4>Screen Status Control</h4>
+            <p>Gerencie o status de exibição do seu painel de LED, permitindo desligá-lo temporariamente (blackout) ou programar seu funcionamento em horários específicos.</p>
+            <h5>Como utilizar Screen Status Control:</h5>
+            <ol>
+                <li><strong>Acessar Screen Status Control:</strong> No menu superior, clique em **"Control"** e selecione **"Screen Status Control"**.</li>
+                <li><strong>Controle Manual:</strong>
+                    <ul>
+                        <li>Ative a opção "Blackout" para desligar a exibição da tela imediatamente, ou desative para retornar à exibição normal.</li>
+                        <li>Útil para pausas rápidas ou interrupções.</li>
+                    </ul>
+                </li>
+                <li><strong>Controle Programado:</strong>
+                    <ul>
+                        <li>Programe horários de início e fim para o modo "Blackout", ou para ligar/desligar o painel, otimizando o uso de energia e a vida útil do display.</li>
+                        <li>Por exemplo, defina para o painel entrar em blackout fora do horário comercial.</li>
+                    </ul>
+                </li>
+            </ol>
+            <img src="res/img/tbs/screen-status1.png" alt="Interface de controle manual de status da tela no ViPlex Express" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/screen-status2.png" alt="Interface de controle programado de status da tela no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
 
-        </li>
+        <section id="restart_configuration_viplex" data-titulo="restart_configuration_viplex">
+            <h4>Restart Configuration</h4>
+            <p>Configure reinícios automáticos para a controladora em intervalos regulares ou horários específicos, o que pode ajudar a manter o desempenho do sistema e resolver pequenos problemas.</p>
+            <h5>Como utilizar Restart Configuration:</h5>
+            <ol>
+                <li><strong>Acessar Restart Configuration:</strong> No menu superior, clique em **"Control"** e selecione **"Restart Configuration"**.</li>
+                <li><strong>Reinício Imediato:</strong> Opção para reiniciar a controladora instantaneamente.</li>
+                <li><strong>Reinício Programado:</strong>
+                    <ul>
+                        <li>Defina uma programação diária ou semanal para a controladora reiniciar automaticamente.</li>
+                        <li>Um reinício regular pode liberar memória e otimizar o funcionamento do sistema, evitando falhas a longo prazo.</li>
+                    </ul>
+                </li>
+            </ol>
+            <img src="res/img/tbs/restart-configuration.png" alt="Interface de configuração de reinício da controladora no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
+
+        <section id="color_temperature_viplex" data-titulo="color_temperature_viplex">
+            <h4>Color Temperature</h4>
+            <p>A controladora oferece opções de temperatura de cor para ajustar o balanço de branco do painel de LED, impactando a tonalidade geral da imagem.</p>
+            <h5>Como utilizar Color Temperature:</h5>
+            <ol>
+                <li><strong>Acessar Color Temperature:</strong> No menu superior, clique em **"Control"** e selecione **"Color Temperature"**.</li>
+                <li><strong>Escolher uma Opção:</strong>
+                    <ul>
+                        <li>**Natural White:** Um balanço de cores mais neutro e próximo à luz do dia.</li>
+                        <li>**Standard White:** Uma configuração padrão, geralmente ligeiramente mais fria que o natural.</li>
+                        <li>**Cold White:** Uma tonalidade mais azulada, que pode ser útil em ambientes externos com forte luz solar.</li>
+                    </ul>
+                </li>
+                <li><strong>Aplicar:</strong> Selecione a opção desejada para alterar a temperatura de cor do painel.</li>
+            </ol>
+            <img src="res/img/tbs/color-temperature.png" alt="Interface de seleção de temperatura de cor no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
+
+        <section id="monitoring_viplex" data-titulo="monitoring_viplex">
+            <h4>Monitoring</h4>
+            <p>Monitore o desempenho e o status de hardware da controladora, incluindo o uso de recursos e informações de sensores, se houver.</p>
+            <h5>Como utilizar Monitoring:</h5>
+            <ol>
+                <li><strong>Acessar Monitoring:</strong> No menu superior, clique em **"Control"** e selecione **"Monitoring"**.</li>
+                <li><strong>Verificar Uso de Recursos:</strong>
+                    <ul>
+                        <li>Visualize gráficos ou indicadores de uso de memória (RAM) e processador (CPU) da controladora.</li>
+                        <li>Um alto uso pode indicar problemas de desempenho ou sobrecarga de mídia.</li>
+                    </ul>
+                </li>
+                <li><strong>Gerenciar Espaço de Armazenamento:</strong>
+                    <ul>
+                        <li>Monitore o espaço de armazenamento interno da controladora e use a opção para limpar arquivos de mídia desnecessários, liberando espaço.</li>
+                    </ul>
+                </li>
+                <li><strong>Sensores (se conectado):</strong>
+                    <ul>
+                        <li>Se um sensor de luminosidade ou temperatura estiver conectado, esta seção exibirá as leituras em tempo real, permitindo ajustes dinâmicos com base no ambiente.</li>
+                    </ul>
+                </li>
+            </ol>
+            <img src="res/img/tbs/monitoring.png" alt="Interface de monitoramento de recursos e sensores no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
+
+        <section id="font_management_viplex" data-titulo="font_management_viplex">
+            <h4>Font Management</h4>
+            <p>Gerencie as fontes de texto disponíveis para uso em seus layouts, permitindo adicionar novas fontes instaladas no computador.</p>
+            <h5>Como utilizar Font Management:</h5>
+            <ol>
+                <li><strong>Acessar Font Management:</strong> No menu superior, clique em **"Control"** e selecione **"Font Management"**.</li>
+                <li><strong>Visualizar Fontes Existentes:</strong> A tela exibirá as fontes que já estão instaladas na sua máquina e disponíveis para o software.</li>
+                <li><strong>Adicionar Novas Fontes:</strong>
+                    <ul>
+                        <li>Para usar uma fonte específica que não está na lista, certifique-se de que ela esteja instalada no sistema operacional do seu computador.</li>
+                        <li>O ViPlex Express pode então detectá-la e permitir seu uso nos layouts de texto.</li>
+                    </ul>
+                </li>
+            </ol>
+            <img src="res/img/tbs/font-management.png" alt="Visão geral do gerenciamento de fontes no ViPlex Express" style="width:75%; margin-top:20px;">
+            <img src="res/img/tbs/font-management-entrar.png" alt="Detalhe da lista de fontes disponíveis no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
+
+        <section id="player_upgrade_viplex" data-titulo="player_upgrade_viplex">
+            <h4>Player Upgrade</h4>
+            <p>Verifique e instale atualizações de firmware para a controladora de LED, garantindo acesso às últimas funcionalidades, melhorias de desempenho e correções de segurança.</p>
+            <h5>Como utilizar Player Upgrade:</h5>
+            <ol>
+                <li><strong>Acessar Player Upgrade:</strong> No menu superior, clique em **"Control"** e selecione **"Player Upgrade"**.</li>
+                <li><strong>Verificar Atualizações Online:</strong> O software pode procurar por atualizações disponíveis diretamente dos servidores da Novastar.</li>
+                <li><strong>Atualizar Localmente:</strong>
+                    <ul>
+                        <li>Se você já possui um arquivo de firmware baixado (geralmente do site da Novastar), pode realizar a atualização offline.</li>
+                        <li>Siga as instruções na tela para selecionar o arquivo e iniciar o processo de upgrade.</li>
+                    </ul>
+                </li>
+                <li><strong>Importante:</strong> Não desligue a controladora durante o processo de atualização.</li>
+            </ol>
+            <img src="res/img/tbs/player-upgrade.png" alt="Interface de atualização de firmware da controladora no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
+
+        <section id="player_information_viplex" data-titulo="player_information_viplex">
+            <h4>Player Information</h4>
+            <p>Visualize detalhes importantes sobre o hardware e software da controladora de LED, útil para suporte técnico e identificação do dispositivo.</p>
+            <h5>Como utilizar Player Information:</h5>
+            <ol>
+                <li><strong>Acessar Player Information:</strong> No menu superior, clique em **"Control"** e selecione **"Player Information"**.</li>
+                <li><strong>Verificar Dados:</strong> A tela exibirá informações como:
+                    <ul>
+                        <li>Número de Série (S/N) da controladora.</li>
+                        <li>Versão do firmware (software) instalado.</li>
+                        <li>Modelo de hardware.</li>
+                        <li>Outros dados técnicos relevantes.</li>
+                    </ul>
+                </li>
+            </ol>
+            <img src="res/img/tbs/player-information.png" alt="Interface de informações do player (controladora) no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
+
+        <section id="multi_screen_mosaic_viplex" data-titulo="multi_screen_mosaic_viplex">
+            <h4>Multi-Screen Mosaic</h4>
+            <p>Para controladoras que suportam múltiplas saídas HDMI (como TB30, TB50, TB60), este recurso permite criar um mosaico de telas, combinando vários painéis de LED para formar uma única tela maior.</p>
+            <h5>Como utilizar Multi-Screen Mosaic:</h5>
+            <ol>
+                <li><strong>Acessar Multi-Screen Mosaic:</strong> No menu superior, clique em **"Control"** e selecione **"Multi-Screen Mosaic"**.</li>
+                <li><strong>Configurar Disposição:</strong>
+                    <ul>
+                        <li>Defina como as diferentes telas serão arranjadas (ex: 1x2, 2x2, etc.).</li>
+                        <li>Configure a resolução total do mosaico e os parâmetros de cada tela individualmente.</li>
+                    </ul>
+                </li>
+                <li><strong>Observação Importante:</strong> As controladoras TB2 e TB20 PLUS não possuem saída HDMI e, portanto, não suporta a funcionalidade de mosaico de telas.</li>
+            </ol>
+            <img src="res/img/tbs/mosaico.png" alt="Interface de configuração de mosaico multi-telas no ViPlex Express" style="width:75%; margin-top:20px;">
+            <div class="alert alert-info">
+                <strong>Obs:</strong> Não é possível com a TB2 e TB20 PLUS criar mosaico de telas, pois as controladoras não possui saída HDMI.
+            </div>
+            <img src="res/img/tbs/control.png" alt="Visão geral do menu 'Control' no ViPlex Express" style="width:75%; margin-top:20px;">
+        </section>
+        
+        <section id="pre_visualizacao_viplex" data-titulo="pre_visualizacao_viplex">
+            <h4>Pré-visualização</h4>
+            <p>A pré-visualização é uma ferramenta crucial para verificar a aparência e o comportamento do conteúdo antes de publicá-lo no painel de LED. Ela garante que tudo esteja conforme o esperado.</p>
+            <h5>Como utilizar a Pré-visualização:</h5>
+            <ol>
+                <li><strong>Localizar:</strong> A área de pré-visualização geralmente está disponível na tela de edição de layouts, próxima à opção "View Schedule".</li>
+                <li><strong>Simular Exibição:</strong> Ao clicar em "Preview", o software simulará como as imagens, vídeos, textos e transições serão exibidos no painel de LED.</li>
+                <li><strong>Ajustar:</strong> Utilize essa funcionalidade para fazer quaisquer ajustes de design, tempo ou animação antes de enviar o conteúdo para o display.</li>
+            </ol>
+            <img src="res/img/tbs/pre-visualizar.png" alt="Tela de pré-visualização de mídia no ViPlex Express" class="img-fluid" style="margin-top:20px;">
+        </section>
 
     </section>
 </section>
@@ -564,7 +810,8 @@
                     </li>
                     <li><strong>Beginner's Guide:</strong>
                         <p>Para uma introdução mais detalhada, consulte o guia de início rápido para configurar layouts ao lado esquerdo da função "View Schedule".</p>
-                    </ol>
+                    </li>
+                  </ol>
             
                 <div class="alert alert-info">
                     <strong>Dica:</strong> Use layouts diferentes para horários de pico e horários de menor movimento, adaptando o conteúdo para o público-alvo.</div>
@@ -575,28 +822,12 @@
     </section>
   
 </section>
-<!---
-<section id="ajuste_cores" data-titulo="ajuste_cores">
-    <h3>Ajuste de Cores</h3>
-    
-    <p>Configure individualmente os valores RGB para uma apresentação mais fiel às cores originais.</p>
 
-</section>
-
-</section>
-    <section id="config_avancadas" data-titulo="config_avancadas">
-            <h3>Configurações Avançadas</h3>
-            <p>Inclui mapeamento, correção de pixels defeituosos e ajuste de refresh rate.</p>
-    </section>
-        <div class="alert alert-warning">
-            <strong>Importante:</strong> Mantenha sempre os softwares atualizados para acesso às últimas funcionalidades e correções de segurança.
-        </div>
-    </section>
-</section>
--->
 <footer class="footer">
     <div class="container">
         <p>Para mais informações, consulte o suporte técnico ou acesse nossa documentação online.</p>
         <p>© 2025 Intelbras S/A</p>
     </div>
 </footer>
+</body>
+</html>
